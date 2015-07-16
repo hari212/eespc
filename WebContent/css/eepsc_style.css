@@ -1,0 +1,1220 @@
+
+
+BODY
+{
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif, Verdana;
+    font-size: 9pt;
+}
+
+TD, TH, TR, P, SPAN, DIV, PRE, LI, UL, A
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 9pt;
+}
+
+
+/* --------------------- colors ------------------------ */
+
+.report_bg
+{
+    background-color: #FFFFCC;
+}
+
+/* --------------------- labels ------------------------ */
+
+.label
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 9pt;
+    font-weight: bold;
+}
+
+.label_right
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 9pt;
+    font-weight: bold;
+    text-align: right;
+}
+
+.small_label
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8pt;
+    font-weight: bold;
+}
+
+.greenLabel 
+{
+    FONT: bold 8.5pt/8.5pt Verdana, Arial, Helvetica, sans-serif;
+    HEIGHT: 17px;
+    color: #009900;
+}
+
+.redLabel 
+{
+    FONT: bold 8.5pt/8.5pt Verdana, Arial, Helvetica, sans-serif;
+    HEIGHT: 17px;
+    color: #FF0000;
+}
+
+.label_no_bold
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 9pt;
+}
+
+.label_right_no_bold
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 9pt;
+    text-align: right;
+}
+
+/* --------------------- headings ------------------------ */
+
+.heading1
+{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 12pt;
+    margin-top: 1em;
+    height: 1em;
+    font-weight: 800;
+}
+
+.heading2
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    text-align: center;
+    margin-top: 1em;
+    height: 1em;
+    font-weight: bold;
+}
+
+/* --------------------- table related ------------------------ */
+
+.border_color
+{
+    background-color: #006699;
+}
+
+.section
+{
+    background-color: #006699;
+    color: white;
+    text-align: left;
+    text-indent: 6px;
+    font-weight: bold;
+    font-size: 10pt;
+    text-decoration: none;
+}
+
+.header
+{
+    background-color: #FFFFCC;
+    font-weight: bold;
+    text-align: center;
+}
+
+.header_left
+{
+    background-color: #FFFFCC;
+    text-align: left;
+    text-indent: 2px;
+    font-weight: bold;
+}
+
+.header_right
+{
+    background-color: #FFFFCC;
+    text-align: right;
+    font-weight: bold;
+}
+
+.data
+{
+    background-color: white;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.data_left
+{
+    background-color: white;
+    text-align: left;
+    vertical-align: middle;
+    /*text-indent: 2;*/
+}
+
+.data_right
+{
+    background-color: white;
+    text-align: right;
+    vertical-align: middle;
+    /*text-indent: 2;*/
+}
+
+.data1
+{
+    background-color: #EEEEEE;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.data2
+{
+    text-align: center;
+    vertical-align: middle;
+}
+
+.data1_left
+{
+    background-color: #EEEEEE;
+    text-align: left;
+    vertical-align: middle;
+    /*text-indent: 2;*/
+}
+
+.data1_right
+{
+    background-color: #EEEEEE;
+    text-align: right;
+    vertical-align: middle;
+}
+
+/* --------------------- messages ------------------------ */
+
+.error
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    color: brown;
+    text-align: center;
+    margin-top: 20px;
+    height: 20px;
+    font-weight: bold;
+}
+
+.note
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8pt;
+    color: brown;
+    font-weight: bold;
+}
+
+.footnote
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 6pt;
+}
+
+.footer
+{
+    FONT: italic 6pt Verdana, Arial, Helvetica, sans-serif;
+    TEXT-TRANSFORM: none
+/*
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: xx-small
+*/    
+}
+
+/* --------------------- legends color ------------------------ */
+
+.past_due
+{
+    background-color: red;
+}
+
+.due_next
+{
+    background-color: yellow;
+}
+
+.scheduled
+{
+    background-color: cyan;
+}
+
+.completed
+{
+    background-color: lime;
+}
+
+.not_scheduled
+{
+    background-color: black;
+}
+
+/* --------------------- buttons ------------------------ */
+
+.button
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 9pt;
+    //font-weight: bold;
+    font-weight: normal;
+}
+
+/* --------------------- text ------------------------ */
+
+.text12
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+}
+
+.text10
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+}
+
+.text9
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 9pt;
+}
+
+.text9_left
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 9pt;
+    text-align: left;
+    /*text-indent: 2;*/
+}
+
+.text8
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8pt;
+}
+
+.text6
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 6pt;
+}
+
+.boldtext8
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8pt;
+    font-weight: bold;
+}
+
+/* --------------------- links ------------------------ */
+
+.header_link
+{
+    background-color: #FFFFCC;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    text-decoration: underline;
+}
+
+A.link
+{
+    font-family: Arial, Helvetica, sans-serif;
+    color:blue;
+}    
+
+/* --------------------- EFMS-IP ------------------------ */
+
+.banner
+{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 16pt;
+    font-weight: bold;
+    color: #FFCC00
+}
+
+.menu
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8pt;
+    background-color: #CCCCFF
+}
+
+.title
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.link8
+{
+    font-size: 8pt;
+    font-weight: bold;
+    color: #003399;
+    text-decoration: none
+}
+
+.link8_disabled
+{
+    font-size: 8pt;
+    font-weight: bold;
+    color: black;
+    text-decoration: none
+}
+
+.link10
+{
+    font-size: 10pt;
+    font-weight: bold;
+    color: #003399;
+    text-decoration: none
+}
+
+
+.ln
+{
+    font-size: 8pt;
+    font-weight: bold;
+    color: #006699;
+    text-decoration: none;
+}
+
+.ln1
+{
+    font-size: 8pt;
+    font-weight: bold;
+    color: #003399;
+    text-decoration: none;
+}
+
+.ln3
+{
+    font-size: 8pt;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+
+/* ----------------- worklist (ATTTM.css) -------------------- */
+/* NEW */
+.box_bg
+{
+    background-color: white;
+}    
+
+/* ----------- error
+.errors
+{    FONT: 700 9pt Verdana, Arial, Helvetica, sans-serif;    COLOR: #990033;    LETTER-SPACING: 1px;    HEIGHT: 17px}
+---------------- */
+.errors
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    color: brown;
+    text-align: center;
+    height: 20px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* ----------- heading1
+.PageHeading
+{    FONT-WEIGHT: 900;    FONT-SIZE: 15pt;    COLOR: 000000;    FONT-STYLE: normal;    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;    line-height: normal}
+---------------- */
+.PageHeading
+{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 12pt;
+    margin-top: 1em;
+    height: 1em;
+    font-weight: 800;
+}
+
+/* ----------- header
+.thAlrt, .thFDT, .thAge, .thWIDD, .thFT, .thUSO, .thAct, .thCN,
+.thCID, .thExp, .thUSODD, .thAT, .thSt, .thSlt, .thCE
+{    FONT-SIZE: 8pt;    FONT-STYLE: normal;    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;    BACKGROUND-COLOR: #9191FF;    text-align: center;    color: #FFFFFF;    font-weight: bold;}
+---------------- */
+.thAlrt, .thFDT, .thAge, .thWIDD, .thFT, .thUSO, .thAct, .thCN,
+.thCID, .thExp, .thUSODD, .thAT, .thSt, .thSlt, .thCE
+{
+    background-color: #FFFFCC;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* ----------- text9_left
+.tdAlrt, .tdFDT, .tdAge, .tdWIDD, .tdFT, .tdUSO, .tdAct, .tdCN,
+.tdCID, .tdExp, .tdUSODD, .tdAT, .tdSt, .tdCE, .tdSlt
+{    FONT-WEIGHT: normal;    FONT-SIZE: 8.5pt;    FONT-STYLE: normal;    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;}
+--------------- */
+.tdAlrt, .tdFDT, .tdAge, .tdWIDD, .tdFT, .tdUSO, .tdAct, .tdCN,
+.tdCID, .tdExp, .tdUSODD, .tdAT, .tdSt, .tdCE, .tdSlt
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 9pt;
+    text-align: left;
+    /*text-indent: 2;*/
+}
+
+/* ----------- label
+.SecHeading
+{    FONT-WEIGHT: 600;    FONT-SIZE: 10pt;    COLOR: 000000;    FONT-STYLE: normal;    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;    line-height: normal}
+--------------- */
+.SecHeading
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 9pt;
+    font-weight: bold;
+}
+
+/* ----------- data_right + label_right
+.fieldboldCopy
+{    FONT: bold 8.5pt Verdana, Arial, Helvetica, sans-serif;    text-align: right}
+--------------- */
+.fieldboldCopy
+{
+    background-color: white;
+    text-align: right;
+    vertical-align: middle;
+    font-weight: bold;
+    font-size: 9pt;
+}
+
+
+.fieldboldCopyTop
+{
+    background-color: white;
+    text-align: right;
+    vertical-align: top;
+    font-weight: bold;
+    font-size: 9pt;
+}
+
+
+.fieldboldHeader
+{
+    background-color: white;
+    text-align: left;
+    vertical-align: middle;
+    font-weight: bold;
+    font-size: 9pt;
+}
+
+
+.fieldboldleft
+{
+    background-color: white;
+    FONT: 8.5pt Verdana, Arial, Helvetica, sans-serif;
+    vertical-align: middle;	
+}
+
+
+.fieldboldlefttop
+{
+    background-color: white;
+    FONT: 8.5pt Verdana, Arial, Helvetica, sans-serif;
+    vertical-align: top;	
+}
+
+.addDeleteButtonStyle
+{
+color: black;
+font-weight: 600;
+font-face: arial;
+font-size: 9pt;
+width: 7em;
+}
+
+.act_lnk
+{
+    FONT: bold 11px Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+
+.nav_fnt
+{
+    FONT-WEIGHT: bolder;
+    FONT-SIZE: 13px;
+    COLOR: #000000;
+    FONT-FAMILY: arial, san-serif;
+    TEXT-DECORATION: none
+}
+
+.nav_fnt_head
+{
+    FONT-WEIGHT: bolder;
+    FONT-SIZE: 13px;
+    COLOR: #ffffff;
+    FONT-FAMILY: arial, san-serif;
+    TEXT-DECORATION: none
+}
+
+.normal
+{
+    FONT: 8.5pt/8.5pt Verdana, Arial, Helvetica, sans-serif;
+    HEIGHT: 17px
+}
+
+.copyright
+{
+    FONT: italic 7px Verdana, Arial, Helvetica, sans-serif;
+    TEXT-TRANSFORM: none
+}
+
+.rev_link
+{
+    FONT: bold 10px Verdana, Arial, Helvetica, sans-serif;
+    COLOR: #ffffff;
+    TEXT-DECORATION: none;
+    background-color: #000000
+}
+
+.lineheight
+{
+    LINE-HEIGHT: 8px
+}
+
+.tabheading
+{
+    FONT-WEIGHT: bolder;
+    FONT-SIZE: 8pt;
+    COLOR: #ffffff;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #666666; line-height: normal
+}
+
+.heading
+{
+    FONT-WEIGHT: bolder;
+    FONT-SIZE: 13px;
+    COLOR: #000000;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-VARIANT: normal
+}
+
+.small_line_height
+{
+    LINE-HEIGHT: 2pt
+}
+
+.small
+{
+    FONT: 7.5pt Verdana, Arial, Helvetica, sans-serif
+}
+
+.medium
+{
+    FONT: 8px Verdana, Arial, Helvetica, sans-serif
+}
+
+.prnt
+{
+    FONT: 9px Verdana, Arial, Helvetica, sans-serif
+}
+
+.heading
+{
+    LINE-HEIGHT: normal
+}
+
+.big
+{
+    FONT: 13px Verdana, Arial, Helvetica, sans-serif
+}
+
+.bigger
+{
+    FONT: bolder 14px Verdana, Arial, Helvetica, sans-serif
+}
+
+.reverse
+{
+    FONT-WEIGHT: bolder;
+    FONT-SIZE: 10px;
+    COLOR: #ffffff;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #000000;
+    FONT-VARIANT: normal
+}
+
+.rev_link_nav
+{
+    FONT: bold 9px Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+
+.rev_link_navCopy
+{
+    FONT: bold 9px Verdana, Arial, Helvetica, sans-serif;
+    COLOR: #ffff00;
+    TEXT-DECORATION: none
+}
+
+.rev_linkCopy
+{
+    FONT: bold 12px Verdana, Arial, Helvetica, sans-serif;
+    COLOR: #999999;
+    TEXT-DECORATION: none
+}
+
+.normal1
+{
+    FONT: 9.5pt Verdana, Arial, Helvetica, sans-serif
+}
+
+.medium1
+{
+    FONT: 10px Verdana, Arial, Helvetica, sans-serif
+}
+
+.tabheadingCopy
+{
+    FONT-WEIGHT: bolder;
+    FONT-SIZE: 10pt;
+    COLOR: #ffffff;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #ffffcc
+}
+
+.bigheading
+{
+    FONT: bolder 14px Verdana, Arial, Helvetica, sans-serif;
+    COLOR: black;
+    BACKGROUND-COLOR: transparent
+}
+
+.tabheadingwhite
+{
+    FONT-WEIGHT: bolder;
+    FONT-SIZE: 10pt;
+    COLOR: #ffffff;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #ffffff
+}
+
+.tabheadingblue
+{
+    FONT-WEIGHT: bolder;
+    FONT-SIZE: 10pt;
+    COLOR: #ffffff;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #4a78ff
+}
+
+.tabheadingorange
+{
+    FONT-WEIGHT: bolder;
+    FONT-SIZE: 10pt;
+    COLOR: #ffffff;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #b0b000
+}
+
+.rep_heading
+{
+    FONT: bolder 17px Arial, Helvetica, sans-serif;
+    COLOR: #000000
+}
+
+TABLE#captab CAPTION
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    COLOR: #ffffff;
+    LINE-HEIGHT: 16px;
+    BACKGROUND-COLOR: 333397;
+    TEXT-ALIGN: left
+    border-width: thin; border-style: solid;
+}
+
+.bigbold
+{
+    FONT: bold 12px Verdana, Arial, Helvetica, sans-serif;
+    COLOR: 333397;
+}
+
+BLINK
+{
+    BEHAVIOR:  url(file:///D|/Documents%20and%20Settings/Administrator/Local%20Settings/Temporary%20Internet%20Files/Content.IE5/blinking.htc);
+    COLOR: red
+}
+
+.txtmemo
+{
+    FONT: 8.5pt Verdana, Arial, Helvetica, sans-serif;
+    HEIGHT: auto
+}
+
+.sysmsg
+{
+    FONT-WEIGHT: bolder;
+    FONT-SIZE: 8.5pt;
+    COLOR: #ff0000;
+    LINE-HEIGHT: normal;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+
+.cal
+{
+    FONT: 11px Geneva, Arial, Helvetica, san-serif;
+    TEXT-TRANSFORM: capitalize;
+    COLOR: #000000
+}
+
+.smallbutton
+{
+    FONT-SIZE: 8pt;
+    VERTICAL-ALIGN: bottom;
+    LINE-HEIGHT: 8px;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    HEIGHT: 8px
+}
+
+.txtboxheight
+{
+    BACKGROUND-POSITION: center 50%;
+    FONT: 8.5pt/8.5pt Arial, Helvetica, sans-serif;
+    TEXT-TRANSFORM: capitalize;
+    HEIGHT: auto
+}
+
+TABLE.Mtable TD
+{
+    BORDER-BOTTOM: #009933 1px solid
+}
+
+TR.H
+{
+    BACKGROUND-COLOR: #ffffcc
+}
+
+.tdlink
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 8.5pt;
+    COLOR: #0000ff;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: underline
+}
+
+TABLE.Ntable TD
+{
+    BORDER-BOTTOM: #eeeeee 1px solid
+}
+
+.lnk
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 8.5pt;
+    COLOR: #0000ff;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+
+.inactive_option
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 8.5pt;
+    COLOR: 333397;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif ;
+    text-decoration: none
+}
+
+.active_option
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 8.5pt;
+    COLOR: #FFFFFF;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+
+.calheading
+{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal
+}
+
+.line_style
+{
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.mainheading
+{
+    FONT: bolder 24px Verdana, Arial, Helvetica, sans-serif;
+    COLOR: black;
+    BACKGROUND-COLOR: transparent
+}
+
+.textboxborder
+{
+    background-color: F2F2F2;
+    border: F2F2F2 solid
+}
+
+.tabheadingtest
+{
+    FONT-WEIGHT: bolder;
+    FONT-SIZE: 8pt;
+    COLOR: #ffffff;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #8080FF;
+    line-height: normal
+}
+
+.tabheadingtest1
+{
+    FONT-WEIGHT: bolder;
+    FONT-SIZE: 8pt;
+    COLOR: #ffffff;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #516BB3;
+    line-height: normal
+}
+
+.tabheadingtest2
+{
+    FONT-WEIGHT: bolder;
+    FONT-SIZE: 8pt;
+    COLOR: #ffffff;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #817C98;
+    line-height: normal
+}
+
+.theadingblue9191FF
+{
+    FONT-WEIGHT: bolder;
+    FONT-SIZE: 8pt;
+    COLOR: #ffffff;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #9191FF;
+}
+
+/* ----------------- uis (inv_style.css) -------------------- */
+/* duplicate
+.link       {COLOR:white; TEXT-DECORATION:none}
+.link:hover {TEXT-DECORATION:underline}
+.button  	{ font-family: Verdana; font-size: 14px; font-weight: bold; background-color: #d0d0d0 }
+*/
+.title1  { font-family: Verdana; font-size: 22px; font-weight: bold }
+.title2  { font-family: Verdana; font-size: 18; font-weight: bold }
+.title3  { font-family: Verdana; font-size: 16; font-weight: bold }
+.title4  { font-family: Verdana; font-size: 14; font-weight: bold }
+.title5  { font-family: Verdana; font-size: 12; font-weight: bold }
+.tableheader14 { font-family: Verdana; font-size: 14px; font-weight: bold }
+.tableheader12 { font-family: Verdana; font-size: 12px; font-weight: bold }
+.tableheader11 { font-family: Verdana; font-size: 11px; font-weight: bold }
+.tablecell14   { font-family: Verdana; font-size: 14px; font-weight: normal }
+.tablecell12   { font-family: Verdana; font-size: 12px; font-weight: normal }
+.tablecell11   { font-family: Verdana; font-size: 11px; font-weight: normal }
+.tablecell10   { font-family: Verdana; font-size: 10px; font-weight: normal }
+.value10      { font-family: Helvetica; font-size: 10px; font-weight: normal }
+.value11        { font-family: Helvetica; font-size: 11px; font-weight: normal }
+.value12        { font-family: Helvetica; font-size: 12px; font-weight: normal }
+.value14      { font-family: Helvetica; font-size: 14px; font-weight: normal }
+.value16      { font-family: Helvetica; font-size: 16px; font-weight: normal }
+.text11        { font-family: Arial; font-size: 11px; font-weight: normal }
+.text12        { font-family: Arial; font-size: 12px; font-weight: normal }
+.text14      { font-family: Arial; font-size: 14px; font-weight: normal }
+.text16      { font-family: Arial; font-size: 16px; font-weight: normal }
+.boldtext10    { font-family: Arial; font-size: 10px; font-weight: bold }
+.boldtext11    { font-family: Arial; font-size: 11px; font-weight: bold }
+.boldtext12    { font-family: Arial; font-size: 12px; font-weight: bold }
+.boldtext14  { font-family: Arial; font-size: 14px; font-weight: bold }
+.boldtext16  { font-family: Arial ; font-size: 16px; font-weight: bold }
+.tab         { font-size: 14px; font-weight: bold ; color: blue}
+.button12   { font-family: Verdana; font-size: 12px; font-weight: bold; background-color: #d0d0d0 }
+.button11   { font-family: Verdana; font-size: 11px; font-weight: bold; background-color: #d0d0d0 }
+.button10   { font-family: Verdana; font-size: 10px; font-weight: bold; background-color: #d0d0d0 }
+.button8   	{ font-family: Verdana; font-size: 8px;  font-weight: bold; background-color: #d0d0d0 }
+.fixedwidthtext14    { font-family: Courier; font-size: 14px; font-weight: normal }
+.fixedwidthtext12    { font-family: Courier; font-size: 12px; font-weight: normal }
+.fixedwidthtext11    { font-family: Courier; font-size: 11px; font-weight: normal }
+.fixedwidthbutton11    { font-family: Coruier; font-size: 11px; font-weight: bold; background-color: #d0d0d0 }
+.fixedwidthbutton8   { font-family: Coruier; font-size: 8px;  font-weight: bold; background-color: #d0d0d0 }
+
+.dropdownmenu {
+background-color: #30309F;
+color: #FFFFFF;
+text-decoration: none;
+font-family: arial, helvetica, sans-serif;
+font-variant: normal;
+font-style: normal;
+font-weight: bold;
+font-size: 10pt;
+}
+.timeStamp   { font-family: Verdana; font-size: 14px; font-weight: bold; color: #000000 }
+.pageHeading   { font-family: Arial; font-size: 18px; font-weight: bold; color: #000000 }
+
+.oddRowStyle
+{
+    background-color: #FFFFFF;
+}
+
+.evenRowStyle
+{
+    background-color: #EEEEEE;
+}
+.columnhead
+{
+    background-color: #FFFFCC;
+    font-weight: bold;
+    text-align: center;
+}
+.columnheadright
+{
+    background-color: #FFFFCC;
+    font-weight: bold;
+    text-align: right;
+}
+.tablelink2
+{
+    background-color: #FFFFCC;
+    font-weight: bold;
+    color: black;
+}
+.globalTableStyle
+{
+    background-color: #006699;   
+}
+
+.tabledata {
+	background-color: #FFFFFF;
+}
+
+
+
+.L1 
+{
+    position:absolute; 
+    layer-background-color: #006699;
+    background-color: #006699;
+    font-weight: bold;        
+    font-size: 10pt; 
+    text-decoration: none;
+    color: white;
+    visibility: hidden;
+}
+
+.L1_out
+{
+    font-weight: bold;        
+    font-size: 10pt;    
+    text-decoration: none;
+    color: white;
+}
+
+.ln1_over
+{
+    font-size: 8pt;
+    font-weight: bold;
+    color: red;
+    text-decoration: none;
+}
+
+.ln_disabled
+{
+    font-size: 8pt;
+    font-weight: bold;
+    color: #cccccc;
+    text-decoration: none;
+}
+
+.selected_tab
+{
+    background-color: #006699;
+    color: white;
+    font-weight: bold;
+    font-size: 10pt;
+    vertical-align: top;
+    text-decoration: none;
+}    
+        
+.selectable_tab
+{
+    background-color: #DADADA;
+    color: #003399;
+    font-weight: bold;
+    font-size: 10pt;
+    vertical-align: top;
+    text-decoration: none;
+}
+
+.disabled_tab
+{
+    background-color: #cccccc;
+    color: black;
+    font-weight: bold;
+    font-size: 10pt;
+    vertical-align: top;
+    text-decoration: none;
+}
+
+.page_title
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #003399;
+    font-size: 12pt;
+}    
+
+
+
+.note1
+{
+    color: green;
+    font-weight: normal;
+}
+
+.bannerLabel
+{
+    font-family: Arial, Verdana, Helvetica, sans-serif;
+    font-size: 9pt;
+    color: white;
+    background-color: #0066CC;
+    text-align: center;
+}
+       
+
+.ln3
+{
+    font-size: 9pt;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+
+.REDStatus
+{
+    color: white;
+    background-color: red;    
+}
+
+.YELLOWStatus
+{
+    color: black;
+    background-color: yellow;    
+}
+
+.GREENStatus
+{
+    color: white;
+    background-color: green;    
+}
+
+.CYANStatus
+{
+    color: black;
+    background-color: cyan;    
+}
+
+.ms_header_link
+{
+    background-color: #FFFFCC;
+    font-weight: bold;
+    color: black;
+}
+
+.legend
+{
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 7pt;    
+}    
+
+.datetime_format
+{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 7pt;
+    font-weight: normal;    
+}
+
+.data_nocolor
+{
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.data_left_nocolor
+{
+
+    text-align: left;
+    vertical-align: middle;
+}
+
+.data_right_nocolor
+{
+    text-align: right;
+    vertical-align: middle;
+
+}
+
+.data1_nocolor
+{
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+
+
+.data1_left_nocolor
+{
+    text-align: left;
+    vertical-align: middle;
+
+}
+
+.data1_right_nocolor
+{
+
+    text-align: right;
+    vertical-align: middle;
+}
+
+.success
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    color: black;
+    text-align: center;
+    margin-top: 20px;
+    height: 20px;
+    font-weight: bold;
+}
+
+.label_red
+{
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 9pt;
+    font-weight: bold;
+    color:red;
+}
+.header_link
+{
+	background-color: #FFFFCC;
+	font-weight: bold;
+	color: black;
+}

@@ -1,0 +1,90 @@
+<MenuItems>
+    <MenuItem>
+        <Id>1</Id>
+        <Level>1</Level>
+        <Name>Facility</Name>
+		<ValidateByFunction>true</ValidateByFunction>
+		<ValidateByProfile>false</ValidateByProfile>
+    </MenuItem>
+    <MenuItem>
+        <Id>2</Id>
+        <Level>2</Level>
+        <Name>Search</Name>
+		<ValidateByFunction>true</ValidateByFunction> 
+		<ValidateByProfile>false</ValidateByProfile>		
+        <DefaultAction>/SearchFacility.do</DefaultAction>
+    </MenuItem>
+
+	<MenuItem>
+        <Id>3</Id>
+        <Level>2</Level>
+        <Name>New</Name>
+		<ValidateByFunction>true</ValidateByFunction>
+		<ValidateByProfile>false</ValidateByProfile>		
+        <DefaultAction>/AddFacility.do?methodToCall=initial</DefaultAction>
+    </MenuItem>
+
+	<MenuItem>
+     <Id>12</Id>
+     <Level>1</Level>
+    <Name>Accounts</Name>
+		<ValidateByFunction>true</ValidateByFunction>
+    </MenuItem>
+
+    <MenuItem>
+        <Id>11</Id>
+        <Level>2</Level>
+        <Name>Change Password</Name>
+		<ValidateByFunction>true</ValidateByFunction>					
+        <DefaultAction>/UserAdministration.do?methodToCall=changepassword</DefaultAction>
+    </MenuItem>
+    <MenuItem>
+     <Id>5</Id>
+     <Level>1</Level>
+    <Name>Reports</Name>
+		<ValidateByFunction>true</ValidateByFunction>
+    </MenuItem>	
+
+	<MenuItem>
+        <Id>6</Id>
+        <Level>2</Level>
+        <Name>State Permit Report(Deadlines)</Name>
+		<ValidateByFunction>true</ValidateByFunction>
+        <DefaultAction>/MasterReportBase.do</DefaultAction>
+    </MenuItem>
+	<MenuItem>
+        <Id>7</Id>
+        <Level>2</Level>
+        <Name>General Reports</Name>
+		<ValidateByFunction>true</ValidateByFunction>
+        <DefaultAction>/GeneralReport.do</DefaultAction>
+    </MenuItem>    
+
+
+	<MenuItem>
+        <Id>8</Id>
+        <Level>2</Level>
+        <Name>Expiration Report</Name>
+		<ValidateByFunction>true</ValidateByFunction>					
+        <DefaultAction>/ExpirationReport.do</DefaultAction>
+    </MenuItem>
+
+    <MenuItem>
+        <Id>9</Id>
+        <Level>1</Level>
+        <Name>Administrative Function</Name>
+		<ValidateByFunction>true</ValidateByFunction>
+		<ValidateByProfile>true</ValidateByProfile>		
+    </MenuItem>	
+
+	<MenuItem>
+        <Id>10</Id>
+        <Level>2</Level>
+        <Name>Manage User</Name>
+		<ValidateByFunction>true</ValidateByFunction>
+		<ValidateByProfile>true</ValidateByProfile>				
+        <DefaultAction>/UserAdministration.do?methodToCall=initial</DefaultAction>
+    </MenuItem>
+
+
+</MenuItems>

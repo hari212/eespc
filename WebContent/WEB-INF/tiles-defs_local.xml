@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+ <!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+<tiles-definitions>
+  <definition name=".main" path="/jsp/LSMainLayout.jsp">
+    <put name="header" value="/jsp/LSBanner.jsp" />
+    <put name="menu" value="/jsp/LSNavMenu.jsp" />
+    <put name="content" value="" />
+  </definition>
+
+  <definition name=".search" extends=".main">
+    <put name="content" value="/jsp/LSSearchScreen.jsp" />
+  </definition>
+
+  <definition name=".home" extends=".main">
+    <put name="content" value="/jsp/LSBodyMain.jsp" />
+  </definition>
+
+  <definition name=".error" extends=".main">
+    <put name="content" value="/jsp/Error.jsp" />
+  </definition>
+
+  <definition name=".welcome" extends=".main">
+    <put name="content" value="/jsp/LSBodyMain.jsp" />
+  </definition>
+
+  <definition name=".worklist" extends=".main">
+    <put name="content" value="/jsp/LSManagerWorklist.jsp" />
+  </definition>
+
+  <definition name=".userworklist" extends=".main">
+    <put name="content" value="/jsp/LSUserWorklist.jsp" />
+  </definition>
+
+   <definition name=".errorworkcenter" extends=".main">
+    <put name="content" value="/html/LSWorkcenterError.html" />
+  </definition>
+
+  <definition name=".orderSearch" extends=".main">
+    <put name="content" value="/jsp/LSOrderSearchScreen.jsp" />
+  </definition>
+
+  <definition name=".orderSearchResult" extends=".main">
+    <put name="content" value="/jsp/LSTaskStatusScreen.jsp" />
+  </definition>
+
+  <definition name=".admin" >
+    <put name="content" value="/jsp/LSAdminScreen.jsp" />
+  </definition>
+
+  <definition name=".profile" >
+    <put name="content" value="/jsp/LSUserProfile.jsp" />
+  </definition>
+
+  <definition name=".taskSearchScreen" extends=".main">
+    <put name="content" value="/jsp/LSTaskSearchScreen.jsp" />
+  </definition>
+  <definition name=".orderstatus" extends=".main">
+    <put name="content" value="/jsp/LSTaskStatusScreen.jsp" />
+  </definition>
+  <definition name=".taskNoRecord" extends=".main">
+    <put name="content" value="/jsp/LSTaskStatusNoRecord.jsp" />
+  </definition>
+</tiles-definitions>

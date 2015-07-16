@@ -1,0 +1,1205 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE struts-config
+  PUBLIC "-//Apache Software Foundation//DTD Struts
+  Configuration 1.1//EN"
+  "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+  <form-beans>
+    <form-bean name="navForm" type="org.apache.struts.action.DynaActionForm">
+        <form-property name="navTo" type="java.lang.String"/>
+        <form-property name="screen" type="java.lang.String"/>
+    </form-bean>   
+
+
+<form-bean name="DeleteForm" type="org.apache.struts.validator.DynaValidatorForm">
+
+         <form-property name="username" type="java.lang.String"/>
+	   <form-property name="password" type="java.lang.String"/> 
+	   <form-property name="methodToCall" type="java.lang.String"/> 
+</form-bean>
+
+<form-bean name="ExpirationForm" type="org.apache.struts.validator.DynaValidatorForm">
+	   <form-property name="methodToCall" type="java.lang.String"/>
+	   <form-property name="from" type="java.lang.String"/>
+	   <form-property name="to" type="java.lang.String"/> 
+</form-bean>
+<form-bean name="OtherEvalutionForm" type="org.apache.struts.validator.DynaValidatorForm">
+	     <form-property name="methodToCall" type="java.lang.String"/>
+	     <form-property name="hdnPermitId" type="java.lang.String"/>
+	     <form-property name="hdnContext" type="java.lang.String"/>
+	     <form-property name="spcc_req" type="java.lang.String"/>
+           <form-property name="stormprevention_req" type="java.lang.String"/>
+           <form-property name="epaaudit_req" type="java.lang.String"/>
+           <form-property name="accfinding_req" type="java.lang.String"/>
+           <form-property name="hazwaste_req" type="java.lang.String"/>
+           <form-property name="hazr_req" type="java.lang.String"/>
+           <form-property name="tier2_req" type="java.lang.String"/>
+           <form-property name="nyccom_req" type="java.lang.String"/>
+           <form-property name="dobvio_req" type="java.lang.String"/>
+           <form-property name="fd_req" type="java.lang.String"/>
+           <form-property name="ecp_req" type="java.lang.String"/>
+           <form-property name="dep_req" type="java.lang.String"/>
+           <form-property name="anystate_req" type="java.lang.String"/>
+           <form-property name="doh_req" type="java.lang.String"/>
+           <form-property name="builtinplan_req" type="java.lang.String"/>
+           <form-property name="fuelinventory_req" type="java.lang.String"/>
+           <form-property name="opacity_req" type="java.lang.String"/>
+           <form-property name="refri_req" type="java.lang.String"/>
+           <form-property name="risk_req" type="java.lang.String"/>
+           <form-property name="other_req" type="java.lang.String"/>
+           <form-property name="spcc_avi" type="java.lang.String"/>
+           <form-property name="stormprevention_avi" type="java.lang.String"/>
+           <form-property name="epaaudit_avi" type="java.lang.String"/>
+           <form-property name="accfinding_avi" type="java.lang.String"/>
+           <form-property name="hazwaste_avi" type="java.lang.String"/>
+           <form-property name="hazr_avi" type="java.lang.String"/>
+           <form-property name="tier2_avi" type="java.lang.String"/>
+           <form-property name="nyccom_avi" type="java.lang.String"/>
+           <form-property name="dobvio_avi" type="java.lang.String"/>
+           <form-property name="fd_avi" type="java.lang.String"/>
+           <form-property name="ecp_avi" type="java.lang.String"/>
+           <form-property name="dep_avi" type="java.lang.String"/>
+           <form-property name="anystate_avi" type="java.lang.String"/>
+           <form-property name="doh_avi" type="java.lang.String"/>
+           <form-property name="builtinplan_avi" type="java.lang.String"/>
+           <form-property name="fuelinventory_avi" type="java.lang.String"/>
+           <form-property name="opacity_avi" type="java.lang.String"/>
+           <form-property name="refri_avi" type="java.lang.String"/>
+           <form-property name="risk_avi" type="java.lang.String"/>
+           <form-property name="other_avi" type="java.lang.String"/>
+           <form-property name="other_inp" type="java.lang.String"/>
+	     <form-property name="laundry_req" type="java.lang.String"/>
+	     <form-property name="laundry_avi" type="java.lang.String"/>
+	     <form-property name="compliancereport_req" type="java.lang.String"/>
+	     <form-property name="compliancereport_avi" type="java.lang.String"/>
+	     <form-property name="depofenergy_req" type="java.lang.String"/>
+	     <form-property name="depofenergy_avi" type="java.lang.String"/>
+</form-bean>
+
+<form-bean name="PrintingPressForm" type="org.apache.struts.validator.DynaValidatorForm">
+	     <form-property name="methodToCall" type="java.lang.String"/>	  	
+	     <form-property name="hdnContext" type="java.lang.String"/>
+	     <form-property name="id" type="java.lang.String"/>
+	     <form-property name="PressId" type="java.lang.String"/>
+	     <form-property name="facilitydesinatedId" type="java.lang.String"/>	     
+           <form-property name="ModifiedInPast" type="java.lang.String"/>
+           <form-property name="DisconnectedYear" type="java.lang.String"/>
+           <form-property name="Pcomments" type="java.lang.String"/>
+           <form-property name="decpermit" type="java.lang.String"/>
+           <form-property name="stacktestrequired" type="java.lang.String"/>
+           <form-property name="isvoc" type="java.lang.String"/>
+           <form-property name="ispm" type="java.lang.String"/>
+           <form-property name="isother" type="java.lang.String"/>
+           <form-property name="depnumber" type="java.lang.String"/>
+           <form-property name="depissuedate" type="java.lang.String"/>
+           <form-property name="depexpirationdate" type="java.lang.String"/>           
+           <form-property name="stackexhastlocation" type="java.lang.String"/>
+           <form-property name="height" type="java.lang.String"/>
+           <form-property name="diameter" type="java.lang.String"/>
+           <form-property name="velocity" type="java.lang.String"/>
+           <form-property name="filterused" type="java.lang.String"/>
+           <form-property name="effiviancy" type="java.lang.String"/>
+           <form-property name="solvantcap" type="java.lang.String"/>
+           <form-property name="annualconsumption" type="java.lang.String"/>
+           <form-property name="Ink1" type="java.lang.String"/>
+           <form-property name="Ink2" type="java.lang.String"/>
+           <form-property name="Ink3" type="java.lang.String"/>
+           <form-property name="Ink4" type="java.lang.String"/>
+           <form-property name="FountainSolution" type="java.lang.String"/>
+           <form-property name="CleaningAgent" type="java.lang.String"/>
+           <form-property name="Ink1name" type="java.lang.String"/>
+           <form-property name="Ink2name" type="java.lang.String"/>
+           <form-property name="Ink3name" type="java.lang.String"/>
+           <form-property name="Ink4name" type="java.lang.String"/>
+           <form-property name="FountainSolutionname" type="java.lang.String"/>
+           <form-property name="CleaningAgentname" type="java.lang.String"/>
+           <form-property name="Ink1volume" type="java.lang.String"/>
+           <form-property name="Ink2volume" type="java.lang.String"/>
+           <form-property name="Ink3volume" type="java.lang.String"/>
+           <form-property name="Ink4volume" type="java.lang.String"/>
+           <form-property name="FountainSolutionvolume" type="java.lang.String"/>
+           <form-property name="CleaningAgentvolume" type="java.lang.String"/>
+           <form-property name="Ink1density" type="java.lang.String"/>
+           <form-property name="Ink2density" type="java.lang.String"/>
+           <form-property name="Ink3density" type="java.lang.String"/>
+           <form-property name="Ink4density" type="java.lang.String"/>
+           <form-property name="FountainSolutiondensity" type="java.lang.String"/>
+           <form-property name="CleaningAgentdensity" type="java.lang.String"/>
+           <form-property name="Ink1vocpercent" type="java.lang.String"/>
+           <form-property name="Ink2vocpercent" type="java.lang.String"/>
+           <form-property name="Ink3vocpercent" type="java.lang.String"/>
+           <form-property name="Ink4vocpercent" type="java.lang.String"/>
+           <form-property name="FountainSolutionvocpercent" type="java.lang.String"/>
+           <form-property name="CleaningAgentvocpercent" type="java.lang.String"/>
+           <form-property name="Ink1voc" type="java.lang.String"/>
+           <form-property name="Ink2voc" type="java.lang.String"/>
+           <form-property name="Ink3voc" type="java.lang.String"/>
+           <form-property name="Ink4voc" type="java.lang.String"/>
+           <form-property name="FountainSolutionvoc" type="java.lang.String"/>
+           <form-property name="CleaningAgentvoc" type="java.lang.String"/>
+	     <form-property name="dobpermit" type="java.lang.String"/>
+	     <form-property name="totalvoc" type="java.lang.String"/>
+
+           <form-property name="inkdeleteConsumptionId" type="java.lang.String"/>
+	     <form-property name="inktype" type="java.lang.String"/>
+	     <form-property name="bctype" type="java.lang.String"/>
+
+	     <form-property name="inkOneId" type="java.lang.String"/>
+	     <form-property name="on_fcyear" type="java.lang.String"/>
+	     <form-property name="on_jan" type="java.lang.String"/>
+	     <form-property name="on_feb" type="java.lang.String"/> 
+	     <form-property name="on_mar" type="java.lang.String"/> 
+	     <form-property name="on_apr" type="java.lang.String"/> 
+	     <form-property name="on_may" type="java.lang.String"/> 
+	     <form-property name="on_jun" type="java.lang.String"/> 
+	     <form-property name="on_jul" type="java.lang.String"/> 
+	     <form-property name="on_aug" type="java.lang.String"/> 
+	     <form-property name="on_sep" type="java.lang.String"/> 
+	     <form-property name="on_oct" type="java.lang.String"/> 
+	     <form-property name="on_nov" type="java.lang.String"/> 
+	     <form-property name="on_dec" type="java.lang.String"/> 
+	     <form-property name="on_yearToDate" type="java.lang.String"/>
+	     <form-property name="on_consumption" type="java.lang.String"/>
+	     <form-property name="on_compliance" type="java.lang.String"/>
+	     <form-property name="on_lock" type="java.lang.String"/>
+	     <form-property name="on_hdnConsumption" type="java.lang.String"/>
+	     <form-property name="on_hdnPreviousConsumption" type="java.lang.String"/>
+	     <form-property name="on_hdnCurrentMonthIndex" type="java.lang.String"/>
+			
+	     <form-property name="inkTwoId" type="java.lang.String"/>
+	     <form-property name="to_fcyear" type="java.lang.String"/>
+	     <form-property name="to_jan" type="java.lang.String"/>
+	     <form-property name="to_feb" type="java.lang.String"/> 
+	     <form-property name="to_mar" type="java.lang.String"/> 
+	     <form-property name="to_apr" type="java.lang.String"/> 
+	     <form-property name="to_may" type="java.lang.String"/> 
+	     <form-property name="to_jun" type="java.lang.String"/> 
+	     <form-property name="to_jul" type="java.lang.String"/> 
+	     <form-property name="to_aug" type="java.lang.String"/> 
+	     <form-property name="to_sep" type="java.lang.String"/> 
+	     <form-property name="to_oct" type="java.lang.String"/> 
+	     <form-property name="to_nov" type="java.lang.String"/> 
+	     <form-property name="to_dec" type="java.lang.String"/> 
+	     <form-property name="to_yearToDate" type="java.lang.String"/>
+	     <form-property name="to_consumption" type="java.lang.String"/>
+	     <form-property name="to_compliance" type="java.lang.String"/>
+	     <form-property name="to_lock" type="java.lang.String"/>
+	     <form-property name="to_hdnConsumption" type="java.lang.String"/>
+	     <form-property name="to_hdnPreviousConsumption" type="java.lang.String"/>
+	     <form-property name="to_hdnCurrentMonthIndex" type="java.lang.String"/>
+
+	     <form-property name="inkThreeId" type="java.lang.String"/>
+	     <form-property name="th_fcyear" type="java.lang.String"/>
+	     <form-property name="th_jan" type="java.lang.String"/>
+	     <form-property name="th_feb" type="java.lang.String"/> 
+	     <form-property name="th_mar" type="java.lang.String"/> 
+	     <form-property name="th_apr" type="java.lang.String"/> 
+	     <form-property name="th_may" type="java.lang.String"/> 
+	     <form-property name="th_jun" type="java.lang.String"/> 
+	     <form-property name="th_jul" type="java.lang.String"/> 
+	     <form-property name="th_aug" type="java.lang.String"/> 
+	     <form-property name="th_sep" type="java.lang.String"/> 
+	     <form-property name="th_oct" type="java.lang.String"/> 
+	     <form-property name="th_nov" type="java.lang.String"/> 
+	     <form-property name="th_dec" type="java.lang.String"/> 
+	     <form-property name="th_yearToDate" type="java.lang.String"/>
+	     <form-property name="th_consumption" type="java.lang.String"/>
+	     <form-property name="th_compliance" type="java.lang.String"/>
+	     <form-property name="th_lock" type="java.lang.String"/>
+	     <form-property name="th_hdnConsumption" type="java.lang.String"/>
+	     <form-property name="th_hdnPreviousConsumption" type="java.lang.String"/>
+	     <form-property name="th_hdnCurrentMonthIndex" type="java.lang.String"/>
+
+	     <form-property name="inkFourId" type="java.lang.String"/>
+	     <form-property name="fr_fcyear" type="java.lang.String"/>
+	     <form-property name="fr_jan" type="java.lang.String"/>
+	     <form-property name="fr_feb" type="java.lang.String"/> 
+	     <form-property name="fr_mar" type="java.lang.String"/> 
+	     <form-property name="fr_apr" type="java.lang.String"/> 
+	     <form-property name="fr_may" type="java.lang.String"/> 
+	     <form-property name="fr_jun" type="java.lang.String"/> 
+	     <form-property name="fr_jul" type="java.lang.String"/> 
+	     <form-property name="fr_aug" type="java.lang.String"/> 
+	     <form-property name="fr_sep" type="java.lang.String"/> 
+	     <form-property name="fr_oct" type="java.lang.String"/> 
+	     <form-property name="fr_nov" type="java.lang.String"/> 
+	     <form-property name="fr_dec" type="java.lang.String"/> 
+	     <form-property name="fr_yearToDate" type="java.lang.String"/>
+	     <form-property name="fr_consumption" type="java.lang.String"/>
+	     <form-property name="fr_compliance" type="java.lang.String"/>
+	     <form-property name="fr_lock" type="java.lang.String"/>
+	     <form-property name="fr_hdnConsumption" type="java.lang.String"/>
+	     <form-property name="fr_hdnPreviousConsumption" type="java.lang.String"/>
+	     <form-property name="fr_hdnCurrentMonthIndex" type="java.lang.String"/>
+
+	     <form-property name="inkFiveId" type="java.lang.String"/>
+	     <form-property name="fi_fcyear" type="java.lang.String"/>
+	     <form-property name="fi_jan" type="java.lang.String"/>
+	     <form-property name="fi_feb" type="java.lang.String"/> 
+	     <form-property name="fi_mar" type="java.lang.String"/> 
+	     <form-property name="fi_apr" type="java.lang.String"/> 
+	     <form-property name="fi_may" type="java.lang.String"/> 
+	     <form-property name="fi_jun" type="java.lang.String"/> 
+	     <form-property name="fi_jul" type="java.lang.String"/> 
+	     <form-property name="fi_aug" type="java.lang.String"/> 
+	     <form-property name="fi_sep" type="java.lang.String"/> 
+	     <form-property name="fi_oct" type="java.lang.String"/> 
+	     <form-property name="fi_nov" type="java.lang.String"/> 
+	     <form-property name="fi_dec" type="java.lang.String"/> 
+	     <form-property name="fi_yearToDate" type="java.lang.String"/>
+	     <form-property name="fi_consumption" type="java.lang.String"/>
+	     <form-property name="fi_compliance" type="java.lang.String"/>
+	     <form-property name="fi_lock" type="java.lang.String"/>
+	     <form-property name="fi_hdnConsumption" type="java.lang.String"/>
+	     <form-property name="fi_hdnPreviousConsumption" type="java.lang.String"/>
+	     <form-property name="fi_hdnCurrentMonthIndex" type="java.lang.String"/>
+
+           <form-property name="inkSixId" type="java.lang.String"/>
+	     <form-property name="si_fcyear" type="java.lang.String"/>
+	     <form-property name="si_jan" type="java.lang.String"/>
+	     <form-property name="si_feb" type="java.lang.String"/> 
+	     <form-property name="si_mar" type="java.lang.String"/> 
+	     <form-property name="si_apr" type="java.lang.String"/> 
+	     <form-property name="si_may" type="java.lang.String"/> 
+	     <form-property name="si_jun" type="java.lang.String"/> 
+	     <form-property name="si_jul" type="java.lang.String"/> 
+	     <form-property name="si_aug" type="java.lang.String"/> 
+	     <form-property name="si_sep" type="java.lang.String"/> 
+	     <form-property name="si_oct" type="java.lang.String"/> 
+	     <form-property name="si_nov" type="java.lang.String"/> 
+	     <form-property name="si_dec" type="java.lang.String"/> 
+	     <form-property name="si_yearToDate" type="java.lang.String"/>
+	     <form-property name="si_consumption" type="java.lang.String"/>
+	     <form-property name="si_compliance" type="java.lang.String"/>
+	     <form-property name="si_lock" type="java.lang.String"/>
+	     <form-property name="si_hdnConsumption" type="java.lang.String"/>
+	     <form-property name="si_hdnPreviousConsumption" type="java.lang.String"/>
+	     <form-property name="si_hdnCurrentMonthIndex" type="java.lang.String"/>
+
+           <form-property name="inkSevenId" type="java.lang.String"/>
+	     <form-property name="se_fcyear" type="java.lang.String"/>
+	     <form-property name="se_jan" type="java.lang.String"/>
+	     <form-property name="se_feb" type="java.lang.String"/> 
+	     <form-property name="se_mar" type="java.lang.String"/> 
+	     <form-property name="se_apr" type="java.lang.String"/> 
+	     <form-property name="se_may" type="java.lang.String"/> 
+	     <form-property name="se_jun" type="java.lang.String"/> 
+	     <form-property name="se_jul" type="java.lang.String"/> 
+	     <form-property name="se_aug" type="java.lang.String"/> 
+	     <form-property name="se_sep" type="java.lang.String"/> 
+	     <form-property name="se_oct" type="java.lang.String"/> 
+	     <form-property name="se_nov" type="java.lang.String"/> 
+	     <form-property name="se_dec" type="java.lang.String"/> 
+	     <form-property name="se_yearToDate" type="java.lang.String"/>
+	     <form-property name="se_consumption" type="java.lang.String"/>
+	     <form-property name="se_compliance" type="java.lang.String"/>
+	     <form-property name="se_lock" type="java.lang.String"/>
+	     <form-property name="se_hdnConsumption" type="java.lang.String"/>
+	     <form-property name="se_hdnPreviousConsumption" type="java.lang.String"/>
+	     <form-property name="se_hdnCurrentMonthIndex" type="java.lang.String"/>
+
+	     <form-property name="dobsignoff" type="java.lang.String"/>
+	     <form-property name="filename" type="org.apache.struts.upload.FormFile"/>
+           <form-property name="foldername" type="java.lang.String"/>
+	     <form-property name="type" type="java.lang.String"/>
+	     <form-property name="pathname" type="java.lang.String"/>
+	     <form-property name="renamefoldername" type="java.lang.String"/>
+</form-bean>
+
+
+<form-bean name="OtherSourceForm" type="org.apache.struts.validator.DynaValidatorForm">
+	   <form-property name="methodToCall" type="java.lang.String"/>
+	   <form-property name="hdnPermitId" type="java.lang.String"/>
+	   <form-property name="hdnContext" type="java.lang.String"/>
+	   <form-property name="othId" type="java.lang.String"/>	
+	   <form-property name="id" type="java.lang.String"/>
+		<form-property name="facilitydesinatedId" type="java.lang.String"/>
+           <form-property name="ModifiedInPast" type="java.lang.String"/>
+           <form-property name="DisconnectedYear" type="java.lang.String"/>
+           <form-property name="Ocomments" type="java.lang.String"/>
+           <form-property name="misname" type="java.lang.String"/>
+           <form-property name="mismake" type="java.lang.String"/>
+           <form-property name="mismodel" type="java.lang.String"/>
+           <form-property name="miscapacity" type="java.lang.String"/>
+           <form-property name="miscapacityunit" type="java.lang.String"/>
+           <form-property name="mispollutant1" type="java.lang.String"/>
+           <form-property name="mispollutant2" type="java.lang.String"/>
+           <form-property name="mispollutant3" type="java.lang.String"/>
+           <form-property name="mispollutant1max" type="java.lang.String"/>
+           <form-property name="mispollutant2max" type="java.lang.String"/>
+           <form-property name="mispollutant3max" type="java.lang.String"/>
+           <form-property name="misdec" type="java.lang.String"/>
+           <form-property name="misdep" type="java.lang.String"/>
+           <form-property name="misdob" type="java.lang.String"/>
+           <form-property name="misdoh" type="java.lang.String"/>
+           <form-property name="misfd" type="java.lang.String"/>
+           <form-property name="misother" type="java.lang.String"/>
+           <form-property name="misissuedate" type="java.lang.String"/>
+           <form-property name="misexpirationdate" type="java.lang.String"/>
+           <form-property name="misexpirationdateNote" type="java.lang.String"/>
+           <form-property name="mismonthly" type="java.lang.String"/>
+           <form-property name="misquartly" type="java.lang.String"/>
+           <form-property name="missemiannualy" type="java.lang.String"/>
+           <form-property name="misannualy" type="java.lang.String"/>
+           <form-property name="misanniversary" type="java.lang.String"/>
+           <form-property name="mistestingrequired" type="java.lang.String"/>
+	     <form-property name="mistestsubmitted" type="java.lang.String"/>
+           <form-property name="complianceissue" type="java.lang.String"/> 
+	     <form-property name="dobsignoff" type="java.lang.String"/>
+	     <form-property name="filename" type="org.apache.struts.upload.FormFile"/>
+           <form-property name="foldername" type="java.lang.String"/>
+	     <form-property name="type" type="java.lang.String"/>
+	     <form-property name="pathname" type="java.lang.String"/>
+	     <form-property name="renamefoldername" type="java.lang.String"/>
+</form-bean>
+
+   <form-bean name="paintSprayForm" type="org.apache.struts.validator.DynaValidatorForm">
+	   <form-property name="id" type="java.lang.String"/> 
+	   <form-property name="psId" type="java.lang.String"/>      
+         <form-property name="psFloor" type="java.lang.String"/>
+	   <form-property name="psMake" type="java.lang.String"/>
+	   <form-property name="psModel" type="java.lang.String"/>
+         <form-property name="psActionTaken" type="java.lang.String"/>
+	   <form-property name="psHoursOfOperation" type="java.lang.String"/>
+	   <form-property name="psTypesOfChemical" type="java.lang.String[]"/>
+	   <form-property name="psExemptedbyDec" type="java.lang.String"/>
+	   <form-property name="P_fuelFrom" type="java.lang.String"/>
+	   <form-property name="ps_yearInstalled" type="java.lang.String"/>
+	   <form-property name="ps_status" type="java.lang.String"/>
+	   <form-property name="ps_disconnecteddate" type="java.lang.String"/>	
+	   <form-property name="P_fuelFromName" type="java.lang.String"/>
+	   <form-property name="psIncludeByDec" type="java.lang.String"/>
+	   <form-property name="psLocation" type="java.lang.String"/>
+	   <form-property name="psDEPNumber" type="java.lang.String"/>
+	   <form-property name="psDEPIssueDate" type="java.lang.String"/>
+	   <form-property name="psDEPExpirationDate" type="java.lang.String"/>
+	   <form-property name="psDEPExpirationDateNote" type="java.lang.String"/>
+	   <form-property name="psStateNumber" type="java.lang.String"/>
+	   <form-property name="psStateIssueDate" type="java.lang.String"/>
+	   <form-property name="psStateExpirationDate" type="java.lang.String"/>
+	   <form-property name="psLocNumber" type="java.lang.String"/>
+	   <form-property name="psLocIssueDate" type="java.lang.String"/>
+	   <form-property name="psLocExpirationDate" type="java.lang.String"/>
+	   <form-property name="methodToCall" type="java.lang.String"/>
+	   <form-property name="hdnPermitId" type="java.lang.String"/>
+	   <form-property name="hdnContext" type="java.lang.String"/>
+	   <form-property name="spraypaint" type="java.lang.String"/>
+         <form-property name="spraysolvant" type="java.lang.String"/>
+         <form-property name="sprayink" type="java.lang.String"/>
+         <form-property name="sprayother" type="java.lang.String"/>
+         <form-property name="spraypaintname" type="java.lang.String"/>
+         <form-property name="spraysolvantname" type="java.lang.String"/>
+         <form-property name="sprayinkname" type="java.lang.String"/>
+         <form-property name="sprayothername" type="java.lang.String"/>
+         <form-property name="spraypaintvocpercent" type="java.lang.String"/>
+         <form-property name="spraysolvantvocpercent" type="java.lang.String"/>
+         <form-property name="sprayinkvocpercent" type="java.lang.String"/>
+         <form-property name="sprayothervocpercent" type="java.lang.String"/>
+         <form-property name="spraypaintvolume" type="java.lang.String"/>
+         <form-property name="spraysolvantvolume" type="java.lang.String"/>
+         <form-property name="sprayinkvolume" type="java.lang.String"/>
+         <form-property name="sprayothervolume" type="java.lang.String"/>
+         <form-property name="spraypaintdensity" type="java.lang.String"/>
+         <form-property name="spraysolvantdensity" type="java.lang.String"/>
+         <form-property name="sprayinkdensity" type="java.lang.String"/>
+         <form-property name="sprayotherdensity" type="java.lang.String"/>
+         <form-property name="spraypaintvoc" type="java.lang.String"/>
+         <form-property name="spraysolvantvoc" type="java.lang.String"/>
+         <form-property name="sprayinkvoc" type="java.lang.String"/>
+         <form-property name="sprayothervoc" type="java.lang.String"/>
+         <form-property name="spraypaintcap" type="java.lang.String"/>
+         <form-property name="spraysolvantcap" type="java.lang.String"/>
+         <form-property name="sprayinkcap" type="java.lang.String"/>
+         <form-property name="vocyear" type="java.lang.String"/>
+         <form-property name="vocmonth" type="java.lang.String"/>
+         <form-property name="voccap" type="java.lang.String"/>
+         <form-property name="vocmonthlyquantity" type="java.lang.String"/>
+         <form-property name="vocmonthlylimit" type="java.lang.String"/>
+         <form-property name="psHoursOfOperationyear" type="java.lang.String"/>
+	   <form-property name="dobsignoff" type="java.lang.String"/>
+         <form-property name="dobnumber" type="java.lang.String"/>
+	   <form-property name="filename" type="org.apache.struts.upload.FormFile"/>
+         <form-property name="foldername" type="java.lang.String"/>
+	   <form-property name="type" type="java.lang.String"/>
+	   <form-property name="pathname" type="java.lang.String"/>
+	   <form-property name="renamefoldername" type="java.lang.String"/>
+    </form-bean>
+
+<form-bean name="FumehoodForm" type="org.apache.struts.validator.DynaValidatorForm">
+         <form-property name="id" type="java.lang.String"/>
+	   <form-property name="FumehoodId" type="java.lang.String"/>      
+	   <form-property name="FumehoodFloor" type="java.lang.String"/>
+	   <form-property name="FumehoodMake" type="java.lang.String"/>
+	   <form-property name="FumehoodModel" type="java.lang.String"/>
+	   <form-property name="FumehoodHoursOfOperation" type="java.lang.String"/>
+	   <form-property name="FumehoodHoursOfOperation1" type="java.lang.String"/>
+	   <form-property name="FumehoodTypesOfChemical" type="java.lang.String[]"/>
+	   <form-property name="FumehoodExemptedbyDec" type="java.lang.String"/>
+
+	   <form-property name="Fumehood_Chemical1" type="java.lang.String"/>
+	   <form-property name="Fumehood_Chemical2" type="java.lang.String"/>
+	   <form-property name="Fumehood_Chemical3" type="java.lang.String"/>
+	   <form-property name="Fumehood_Chemical4" type="java.lang.String"/>
+	   <form-property name="Fumehood_Chemical5" type="java.lang.String"/>
+
+	   <form-property name="Fumehood_Chemicalname1" type="java.lang.String"/>
+	   <form-property name="Fumehood_Chemicalname2" type="java.lang.String"/>
+	   <form-property name="Fumehood_Chemicalname3" type="java.lang.String"/>
+	   <form-property name="Fumehood_Chemicalname4" type="java.lang.String"/>
+	   <form-property name="Fumehood_Chemicalname5" type="java.lang.String"/>
+	   
+	   <form-property name="Fumehood_volume1" type="java.lang.String"/>
+	   <form-property name="Fumehood_volume2" type="java.lang.String"/>
+	   <form-property name="Fumehood_volume3" type="java.lang.String"/>
+	   <form-property name="Fumehood_volume4" type="java.lang.String"/>
+	   <form-property name="Fumehood_volume5" type="java.lang.String"/>
+
+	   <form-property name="Fumehood_density1" type="java.lang.String"/>
+	   <form-property name="Fumehood_density2" type="java.lang.String"/>
+	   <form-property name="Fumehood_density3" type="java.lang.String"/>
+	   <form-property name="Fumehood_density4" type="java.lang.String"/>
+	   <form-property name="Fumehood_density5" type="java.lang.String"/>
+		
+	   <form-property name="Fumehood_voc1" type="java.lang.String"/>
+	   <form-property name="Fumehood_voc2" type="java.lang.String"/>
+	   <form-property name="Fumehood_voc3" type="java.lang.String"/>
+	   <form-property name="Fumehood_voc4" type="java.lang.String"/>
+	   <form-property name="Fumehood_voc5" type="java.lang.String"/>
+
+	   <form-property name="Fumehood_voct1" type="java.lang.String"/>
+	   <form-property name="Fumehood_voct2" type="java.lang.String"/>
+	   <form-property name="Fumehood_voct3" type="java.lang.String"/>
+	   <form-property name="Fumehood_voct4" type="java.lang.String"/>
+	   <form-property name="Fumehood_voct5" type="java.lang.String"/>
+
+	   <form-property name="Fumehood_voc" type="java.lang.String"/>
+	   <form-property name="Fumehood_dob" type="java.lang.String"/>
+	   <form-property name="Fumehood_fuelFrom" type="java.lang.String"/>	
+	   <form-property name="Fumehood_fuelFromName" type="java.lang.String"/>
+	   <form-property name="FumehoodIncludeByDec" type="java.lang.String"/>
+	   <form-property name="FumehoodLocation" type="java.lang.String"/>
+	   <form-property name="Fumehood_yearInstalled" type="java.lang.String"/>
+	   <form-property name="Fumehood_status" type="java.lang.String"/>
+	   <form-property name="Fumehood_disconnecteddate" type="java.lang.String"/>
+	   <form-property name="FumehoodDEPNumber" type="java.lang.String"/>
+	   <form-property name="depPermitStatus" type="java.lang.String"/>
+	   <form-property name="dobPermitStatus" type="java.lang.String"/>
+	   <form-property name="annualPermitStatus" type="java.lang.String"/>
+	   <form-property name="lastInspectionDate" type="java.lang.String"/>
+	   <form-property name="nextInspectionDate" type="java.lang.String"/>
+	   <form-property name="FumehoodDEPIssueDate" type="java.lang.String"/>
+	   <form-property name="FumehoodDEPExpirationDate" type="java.lang.String"/>
+	   <form-property name="FumehoodDEPExpirationDateNote" type="java.lang.String"/>
+
+	   <form-property name="FumehoodLocNumber" type="java.lang.String"/>
+	   <form-property name="FumehoodLocIssueDate" type="java.lang.String"/>
+	   <form-property name="FumehoodLocExpirationDate" type="java.lang.String"/>
+
+         <form-property name="methodToCall" type="java.lang.String"/>
+	   <form-property name="hdnPermitId" type="java.lang.String"/>
+	   <form-property name="hdnContext" type="java.lang.String"/>
+	   <form-property name="fcomments" type="java.lang.String"/>
+	   <form-property name="dobsignoff" type="java.lang.String"/>
+	   <form-property name="filename" type="org.apache.struts.upload.FormFile"/>
+         <form-property name="foldername" type="java.lang.String"/>
+	   <form-property name="type" type="java.lang.String"/>
+	   <form-property name="pathname" type="java.lang.String"/>
+	   <form-property name="renamefoldername" type="java.lang.String"/>
+    </form-bean>   
+   <form-bean name="landFillsForm" type="org.apache.struts.validator.DynaValidatorForm">
+	   <form-property name="id" type="java.lang.String"/>
+	   <form-property name="lfId" type="java.lang.String"/>      
+	   <form-property name="lfDate" type="java.lang.String"/>
+	   <form-property name="lfFacility" type="java.lang.String"/>
+	   <form-property name="lfTurbines" type="java.lang.String"/>
+	   <form-property name="lfCoTurbines" type="java.lang.String[]"/>
+	   <form-property name="lfEmission" type="java.lang.String"/>
+	   <form-property name="psLocation" type="java.lang.String"/>
+
+	   <form-property name="lf_yearInstalled" type="java.lang.String"/>
+	   <form-property name="lf_status" type="java.lang.String"/>
+	   <form-property name="lf_disconnecteddate" type="java.lang.String"/>
+
+	   <form-property name="lfDEPNumber" type="java.lang.String"/>
+	   <form-property name="lfDEPIssueDate" type="java.lang.String"/>
+	   <form-property name="lfDEPExpirationDate" type="java.lang.String"/>
+	   <form-property name="lfDEPExpirationDateNote" type="java.lang.String"/>
+
+	   <form-property name="lfStateNumber" type="java.lang.String"/>
+	   <form-property name="lfStateIssueDate" type="java.lang.String"/>
+	   <form-property name="lfStateExpirationDate" type="java.lang.String"/>
+
+	   <form-property name="lfLocNumber" type="java.lang.String"/>
+	   <form-property name="lfLocIssueDate" type="java.lang.String"/>
+	   <form-property name="lfLocExpirationDate" type="java.lang.String"/>
+	   <form-property name="methodToCall" type="java.lang.String"/>
+	   <form-property name="hdnPermitId" type="java.lang.String"/>
+	   <form-property name="hdnContext" type="java.lang.String"/>
+
+	     
+           <form-property name="lfDOBNumber" type="java.lang.String"/>
+           <form-property name="lfDOBIssuedate" type="java.lang.String"/>
+           <form-property name="lfLFGQuantity" type="java.lang.String"/>
+           <form-property name="LFGQuantity" type="java.lang.String"/>
+           <form-property name="lfLFGCombustion" type="java.lang.String"/>
+           <form-property name="LFGCombustion" type="java.lang.String"/>
+           <form-property name="lfSCH4" type="java.lang.String"/>
+           <form-property name="svalue" type="java.lang.String"/>
+           <form-property name="sallowablevalue" type="java.lang.String"/>
+           <form-property name="ch4value" type="java.lang.String"/>
+           <form-property name="ch4allowablevalue" type="java.lang.String"/>
+           <form-property name="istemperaturelimit" type="java.lang.String"/>
+           <form-property name="temperaturevalue" type="java.lang.String"/>
+           <form-property name="temperatureallowablevalue" type="java.lang.String"/>
+           <form-property name="noxvalue" type="java.lang.String"/>
+           <form-property name="noxallowablevalue" type="java.lang.String"/>
+           <form-property name="covalue" type="java.lang.String"/>
+           <form-property name="coallowablevalue" type="java.lang.String"/>
+           <form-property name="ovalue" type="java.lang.String"/>
+           <form-property name="oallowablevalue" type="java.lang.String"/>
+           <form-property name="yearlyoperating" type="java.lang.String"/>
+           <form-property name="yearlyvalue" type="java.lang.String"/>
+           <form-property name="yearlyallowablevalue" type="java.lang.String"/>
+           <form-property name="lcomments" type="java.lang.String"/>
+           <form-property name="aesdate" type="java.lang.String"/>
+	     <form-property name="dobsignoff" type="java.lang.String"/>
+	     <form-property name="filename" type="org.apache.struts.upload.FormFile"/>
+           <form-property name="foldername" type="java.lang.String"/>
+	     <form-property name="type" type="java.lang.String"/>
+	     <form-property name="pathname" type="java.lang.String"/>
+	     <form-property name="renamefoldername" type="java.lang.String"/>
+
+    </form-bean>
+    
+    <form-bean name="rpzForm" type="org.apache.struts.validator.DynaValidatorForm">
+         <form-property name="id" type="java.lang.String"/>
+	   <form-property name="rpzId" type="java.lang.String"/>      
+         <form-property name="rpzYear" type="java.lang.String"/>
+         <form-property name="ModifiedInPast" type="java.lang.String"/> 
+         <form-property name="DisconnectedYear" type="java.lang.String"/> 
+	   <form-property name="rpzSerialNo" type="java.lang.String"/>
+	   <form-property name="rpzLocSNo" type="java.lang.String"/>
+	   <form-property name="rpzMake" type="java.lang.String"/>
+	   <form-property name="rpzModel" type="java.lang.String"/>
+	   <form-property name="rpzType" type="java.lang.String"/>
+         <form-property name="Permit" type="java.lang.String"/>
+         <form-property name="rpzSize" type="java.lang.String"/>
+	   <form-property name="psLocation" type="java.lang.String"/>
+	   <form-property name="rpzDOB" type="java.lang.String"/>
+	   <form-property name="rpzDEP" type="java.lang.String"/>	   
+	   <form-property name="rpzLastInspDate" type="java.lang.String"/>
+	   <form-property name="rpzNextInspDate" type="java.lang.String"/>
+	   <form-property name="rpzNextInspDateNote" type="java.lang.String"/>
+	   <form-property name="rpzLocNumber" type="java.lang.String"/>
+	   <form-property name="rpzLocIssueDate" type="java.lang.String"/>
+	   <form-property name="rpzLocExpirationDate" type="java.lang.String"/>
+	   <form-property name="rpzLocExpirationDateNote" type="java.lang.String"/>
+	   <form-property name="rpzComment" type="java.lang.String"/>
+	   <form-property name="methodToCall" type="java.lang.String"/>
+	   <form-property name="hdnPermitId" type="java.lang.String"/>
+	   <form-property name="hdnContext" type="java.lang.String"/>
+	   <form-property name="dobsignoff" type="java.lang.String"/>
+	   <form-property name="filename" type="org.apache.struts.upload.FormFile"/>
+         <form-property name="foldername" type="java.lang.String"/>
+	   <form-property name="type" type="java.lang.String"/>
+	   <form-property name="pathname" type="java.lang.String"/>
+	   <form-property name="renamefoldername" type="java.lang.String"/>
+    </form-bean>
+
+    <form-bean name="etoForm" type="org.apache.struts.validator.DynaValidatorForm">
+	   <form-property name="etoManufacturer" type="java.lang.String"/>      
+         <form-property name="etoModel" type="java.lang.String"/>
+	   <form-property name="etoSerialNo" type="java.lang.String"/>
+	   <form-property name="etoVolume" type="java.lang.String"/>
+	   <form-property name="etoMixtureType" type="java.lang.String"/>
+	   <form-property name="etoWeight" type="java.lang.String"/>
+	   <form-property name="etoGas" type="java.lang.String"/>
+	   <form-property name="etoInsDate" type="java.lang.String"/>
+	   <form-property name="etoIsDailyrec" type="java.lang.String"/>
+	   <form-property name="psLocation" type="java.lang.String"/>
+	   <form-property name="etoTestYear" type="java.lang.String"/>
+	   <form-property name="etoTestIssueDate" type="java.lang.String"/>
+	   <form-property name="etoTestExpirationDate" type="java.lang.String"/>
+	   <form-property name="etoDOB" type="java.lang.String"/>
+	   <form-property name="etoDEP" type="java.lang.String"/>
+	   <form-property name="etoDEPYear" type="java.lang.String"/>
+	   <form-property name="etoDEPIssueDate" type="java.lang.String"/>
+	   <form-property name="etoDEPExpirationDate" type="java.lang.String"/>
+	   <form-property name="etoStateNumber" type="java.lang.String"/>
+	   <form-property name="etoStateYear" type="java.lang.String"/>
+	   <form-property name="etoStateIssueDate" type="java.lang.String"/>
+	   <form-property name="etoStateExpirationDate" type="java.lang.String"/>
+	   <form-property name="hdnPermitId" type="java.lang.String"/>
+	   <form-property name="hdnContext" type="java.lang.String"/>
+
+
+	   <form-property name="filename" type="org.apache.struts.upload.FormFile"/>
+         <form-property name="foldername" type="java.lang.String"/>
+	   <form-property name="type" type="java.lang.String"/>
+	   <form-property name="pathname" type="java.lang.String"/>
+	   <form-property name="renamefoldername" type="java.lang.String"/>
+
+  </form-bean>
+
+  <form-bean name="eleForm" type="org.apache.struts.validator.DynaValidatorForm">
+           <form-property name="id" type="java.lang.String"/>      
+	   	<form-property name="eleId" type="java.lang.String"/>  
+           <form-property name="elecomment" type="java.lang.String"/>     
+           <form-property name="eleHydTank" type="java.lang.String"/>
+           <form-property name="eleHydTankFrom" type="java.lang.String"/>
+		<form-property name="YearInstalled" type="java.lang.String"/>
+	   	<form-property name="elePermit" type="java.lang.String"/>
+	   	<form-property name="eleLastInsDate" type="java.lang.String"/>
+	   	<form-property name="eleRepSubmDate" type="java.lang.String"/>
+	   	<form-property name="eleRepSubmDateNote" type="java.lang.String"/>
+	   	<form-property name="eleFirm" type="java.lang.String"/>
+	   	<form-property name="eleNextInspDate" type="java.lang.String"/>
+  	   	<form-property name="eleNextInspDateNote" type="java.lang.String"/>
+            <form-property name="ModifiedInPast" type="java.lang.String"/> 
+        	<form-property name="DisconnectedYear" type="java.lang.String"/> 
+   	   	<form-property name="methodToCall" type="java.lang.String"/>   	
+	   	<form-property name="hdnPermitId" type="java.lang.String"/>
+	   	<form-property name="hdnContext" type="java.lang.String"/>
+		<form-property name="eleType" type="java.lang.String"/>
+		<form-property name="filename" type="org.apache.struts.upload.FormFile"/>
+            <form-property name="foldername" type="java.lang.String"/>
+		<form-property name="type" type="java.lang.String"/>
+		<form-property name="pathname" type="java.lang.String"/>
+		<form-property name="renamefoldername" type="java.lang.String"/>
+
+  </form-bean>
+
+    <form-bean name="incForm" type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="id" type="java.lang.String"/>       
+      <form-property name="incId" type="java.lang.String"/>      
+      <form-property name="incStack" type="java.lang.String"/>     
+      <form-property name="incStackFrom" type="java.lang.String"/>     
+      <form-property name="incFloor" type="java.lang.String"/>
+   	<form-property name="incModel" type="java.lang.String"/>
+   	<form-property name="incMake" type="java.lang.String"/>
+   	<form-property name="incSerialNo" type="java.lang.String"/>
+   	<form-property name="incYearIns" type="java.lang.String"/>
+   	<form-property name="incBurner" type="java.lang.String"/>
+   	<form-property name="incBurnMake" type="java.lang.String"/>      
+      <form-property name="incBurnModel" type="java.lang.String"/>
+      <form-property name="incWasteBurnType" type="java.lang.String"/>
+	<form-property name="inc_status" type="java.lang.String"/>
+	<form-property name="inc_disconnecteddate" type="java.lang.String"/>
+	<form-property name="typeofunit" type="java.lang.String"/>
+   	<form-property name="dobno" type="java.lang.String"/>
+   	<form-property name="teperaturerequired" type="java.lang.String"/>
+   	<form-property name="facilitysecondary" type="java.lang.String"/>
+   	<form-property name="facilityprimary" type="java.lang.String"/>      
+      <form-property name="primarytemp" type="java.lang.String"/>
+   	<form-property name="sectemp" type="java.lang.String"/>
+   	<form-property name="deprequired" type="java.lang.String"/>
+   	<form-property name="depno" type="java.lang.String"/>
+   	<form-property name="incCapacity" type="java.lang.String"/>
+   	<form-property name="incScrubber" type="java.lang.String"/>
+   	<form-property name="incDOB" type="java.lang.String"/>
+   	<form-property name="incMea" type="java.lang.String"/>
+   	<form-property name="incDEPIssueDate" type="java.lang.String"/>      
+      <form-property name="incDEPExpirationDate" type="java.lang.String"/>
+	<form-property name="incDEPExpirationDateNote" type="java.lang.String"/>
+   	<form-property name="incLocation" type="java.lang.String"/>
+   	<form-property name="incLocIssueDate" type="java.lang.String"/>
+   	<form-property name="incLocExpirationDate" type="java.lang.String"/>
+   	<form-property name="incCOMonitor" type="java.lang.String"/>
+   	<form-property name="incOpacity" type="java.lang.String"/>      
+      <form-property name="incO2Monitor" type="java.lang.String"/>
+   	<form-property name="incOpacityChart" type="java.lang.String"/>
+   	<form-property name="incQuarterlyCGA" type="java.lang.String"/>
+   	<form-property name="incCGADate" type="java.lang.String"/>
+   	<form-property name="incCGA" type="java.lang.String"/>
+   	<form-property name="incCGANext" type="java.lang.String"/>
+   	<form-property name="incAnnualYear" type="java.lang.String"/>
+   	<form-property name="incAnnualConsumption" type="java.lang.String"/>      
+      <form-property name="DisconnectedOn" type="java.lang.String"/>
+   	<form-property name="ModifiedInPast" type="java.lang.String"/>
+   	<form-property name="incStackTestDate" type="java.lang.String"/>
+   	<form-property name="methodToCall" type="java.lang.String"/>   	
+	<form-property name="hdnPermitId" type="java.lang.String"/>
+	<form-property name="hdnContext" type="java.lang.String"/>
+
+
+
+	<form-property name="B_parameters1" type="java.lang.String"/>
+   	<form-property name="B_parameters2" type="java.lang.String"/>
+   	<form-property name="B_parameters3" type="java.lang.String"/>
+   	<form-property name="B_parameters4" type="java.lang.String"/>      
+      <form-property name="B_parameters5" type="java.lang.String"/>
+   	<form-property name="B_parameters6" type="java.lang.String"/>
+   	<form-property name="B_parameters7" type="java.lang.String"/>
+   	<form-property name="B_parameters8" type="java.lang.String"/>   	
+	<form-property name="B_parameters9" type="java.lang.String"/>
+	
+
+	<form-property name="decno" type="java.lang.String"/>
+   	<form-property name="incStackTested" type="java.lang.String"/>
+   	<form-property name="i_decPermitObtained" type="java.lang.String"/>
+   	<form-property name="protocolSubmitted" type="java.lang.String"/>      
+      <form-property name="testConductedBy" type="java.lang.String"/>
+   	<form-property name="testReportSubmited" type="java.lang.String"/>
+   	<form-property name="testReportSubmitedDate" type="java.lang.String"/>
+   	<form-property name="retestPlanned" type="java.lang.String"/>   	
+	<form-property name="i_testPassed" type="java.lang.String"/>
+	<form-property name="i_StackTestDate" type="java.lang.String"/>
+	<form-property name="nextStackTest" type="java.lang.String"/>
+	<form-property name="nextStackTestNote" type="java.lang.String"/>
+	<form-property name="iwastequantity" type="java.lang.String"/>   	
+	<form-property name="isolidwaste" type="java.lang.String"/>
+	<form-property name="i_SolidIssuedDate" type="java.lang.String"/>
+	<form-property name="i_SolidExpirationDate" type="java.lang.String"/>
+	<form-property name="solidWasteExpirationNote" type="java.lang.String"/>
+	<form-property name="icomments" type="java.lang.String"/>
+	<form-property name="iwastelimit" type="java.lang.String"/>
+
+	<form-property name="fueldeleteConsumptionId" type="java.lang.String"/>
+	<form-property name="bctype" type="java.lang.String"/>
+	<form-property name="fuelConsumptionId" type="java.lang.String"/>
+	<form-property name="fcyear" type="java.lang.String"/>
+	<form-property name="jan" type="java.lang.String"/>
+	<form-property name="feb" type="java.lang.String"/> 
+	<form-property name="mar" type="java.lang.String"/> 
+	<form-property name="apr" type="java.lang.String"/> 
+	<form-property name="may" type="java.lang.String"/> 
+	<form-property name="jun" type="java.lang.String"/> 
+	<form-property name="jul" type="java.lang.String"/> 
+	<form-property name="aug" type="java.lang.String"/> 
+	<form-property name="sep" type="java.lang.String"/> 
+	<form-property name="oct" type="java.lang.String"/> 
+	<form-property name="nov" type="java.lang.String"/> 
+	<form-property name="dec" type="java.lang.String"/> 
+	<form-property name="yearToDate" type="java.lang.String"/>
+	<form-property name="consumption" type="java.lang.String"/>
+	<form-property name="compliance" type="java.lang.String"/>
+	<form-property name="lock" type="java.lang.String"/>
+	<form-property name="hdnConsumption" type="java.lang.String"/>
+	<form-property name="hdnPreviousConsumption" type="java.lang.String"/>
+	<form-property name="hdnCurrentMonthIndex" type="java.lang.String"/>
+	<form-property name="dobsignoff" type="java.lang.String"/>
+	<form-property name="filename" type="org.apache.struts.upload.FormFile"/>
+      <form-property name="foldername" type="java.lang.String"/>
+	<form-property name="type" type="java.lang.String"/>
+	<form-property name="pathname" type="java.lang.String"/>
+	<form-property name="renamefoldername" type="java.lang.String"/>
+
+  </form-bean>
+    <form-bean name="chForm" type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="id" type="java.lang.String"/>       
+      <form-property name="chFacId" type="java.lang.String"/>      
+      <form-property name="chFloor" type="java.lang.String"/>
+   	<form-property name="chModel" type="java.lang.String"/>
+   	<form-property name="chMake" type="java.lang.String"/>
+   	<form-property name="chSerialNo" type="java.lang.String"/>
+   	<form-property name="YearInstalled" type="java.lang.String"/>
+   	<form-property name="chBurnerType" type="java.lang.String"/>
+   	<form-property name="chPrimFuel" type="java.lang.String"/>      
+      <form-property name="chSecFuel" type="java.lang.String"/>
+      <form-property name="chFuel" type="java.lang.String"/>
+      <form-property name="chFuelFrom" type="java.lang.String"/>
+      <form-property name="chStack" type="java.lang.String"/>     
+      <form-property name="chStackFrom" type="java.lang.String"/>     
+   	<form-property name="chCapacity" type="java.lang.String"/>
+      <form-property name="chCapacityton" type="java.lang.String"/>
+   	<form-property name="chFuelAbility" type="java.lang.String"/>
+   	<form-property name="B_oilFiringRate" type="java.lang.String"/>
+   	<form-property name="B_naturalGasFiringRate" type="java.lang.String"/>
+   	<form-property name="chTitleV" type="java.lang.String"/>
+   	<form-property name="chDOB" type="java.lang.String"/>
+      <form-property name="ModifiedInPast" type="java.lang.String"/> 
+      <form-property name="DisconnectedYear" type="java.lang.String"/>
+	<form-property name="eupAvailable" type="java.lang.String"/> 
+   	<form-property name="chMea" type="java.lang.String"/>
+	<form-property name="chdepapproval" type="java.lang.String"/>
+	<form-property name="chactiontaken" type="java.lang.String"/>
+   	<form-property name="chAnnualYear" type="java.lang.String"/>
+   	<form-property name="chAnnualConsumption" type="java.lang.String"/>
+	<form-property name="chAnnualConsumptioncfy" type="java.lang.String"/>
+   	<form-property name="dobjobnumber" type="java.lang.String"/>      
+      <form-property name="chDEPExpirationDate" type="java.lang.String"/>
+	<form-property name="chComments" type="java.lang.String"/>
+	<form-property name="chFootnote" type="java.lang.String"/>
+	<form-property name="chillerOperated" type="java.lang.String"/>
+   	<form-property name="methodToCall" type="java.lang.String"/>   	        
+	<form-property name="hdnPermitId" type="java.lang.String"/>
+	<form-property name="hdnContext" type="java.lang.String"/>
+	<form-property name="dobsignoff" type="java.lang.String"/>
+	<form-property name="filename" type="org.apache.struts.upload.FormFile"/>
+      <form-property name="foldername" type="java.lang.String"/>
+	<form-property name="type" type="java.lang.String"/>
+	<form-property name="pathname" type="java.lang.String"/>
+	<form-property name="renamefoldername" type="java.lang.String"/>
+  </form-bean>
+ <form-bean name="ChillerRefrigationForm" type="org.apache.struts.validator.DynaValidatorForm">
+	<form-property name="hdnPermitId" type="java.lang.String"/>
+	<form-property name="hdnContext" type="java.lang.String"/>
+	<form-property name="id" type="java.lang.String"/>
+	<form-property name="methodToCall" type="java.lang.String"/>
+      <form-property name="chillerRefrigationId" type="java.lang.String"/>
+      <form-property name="buildingId" type="java.lang.String"/>
+      <form-property name="facilitydesignatedid" type="java.lang.String"/>
+      <form-property name="yearinstalled" type="java.lang.String"/>
+      <form-property name="make" type="java.lang.String"/>
+      <form-property name="model" type="java.lang.String"/>
+      <form-property name="serialnum" type="java.lang.String"/>
+	<form-property name="areaServed" type="java.lang.String"/>
+	<form-property name="dobfiling" type="java.lang.String"/>
+	<form-property name="fuelFiring" type="java.lang.String"/>
+      <form-property name="fuelUsed" type="java.lang.String"/>
+      <form-property name="depStatus" type="java.lang.String"/>
+	<form-property name="deppermit" type="java.lang.String"/>
+	<form-property name="depexpirationdate" type="java.lang.String"/>
+      <form-property name="status" type="java.lang.String"/>
+      <form-property name="disconnectedyear" type="java.lang.String"/>
+      <form-property name="location" type="java.lang.String"/>
+      <form-property name="capacitytons" type="java.lang.String"/>
+      <form-property name="capacitybtu" type="java.lang.String"/>
+      <form-property name="equipmentusepermit" type="java.lang.String"/>
+      <form-property name="dobpermit" type="java.lang.String"/>
+      <form-property name="dobissuedate" type="java.lang.String"/>
+      <form-property name="dobsignoff" type="java.lang.String"/>
+      <form-property name="epastatus" type="java.lang.String"/>
+      <form-property name="epasubmittaldate" type="java.lang.String"/>      
+      <form-property name="epaapprovaldate" type="java.lang.String"/>
+      <form-property name="fdaapproval" type="java.lang.String"/>
+      <form-property name="comments" type="java.lang.String"/>
+      <form-property name="refrigerationrecovery" type="java.lang.String"/>
+      <form-property name="epamaintained" type="java.lang.String"/>
+	<form-property name="filename" type="org.apache.struts.upload.FormFile"/>
+      <form-property name="foldername" type="java.lang.String"/>
+	<form-property name="type" type="java.lang.String"/>
+	<form-property name="pathname" type="java.lang.String"/>
+	<form-property name="renamefoldername" type="java.lang.String"/>
+</form-bean>
+
+
+ 
+
+
+<form-bean name="FireAlarmForm" type="org.apache.struts.validator.DynaValidatorForm">
+	<form-property name="hdnPermitId" type="java.lang.String"/>
+	<form-property name="hdnContext" type="java.lang.String"/>
+	<form-property name="id" type="java.lang.String"/>
+	<form-property name="methodToCall" type="java.lang.String"/>
+      <form-property name="buildingId" type="java.lang.String"/>
+	<form-property name="facilitydesignatedid"  type="java.lang.String"/>
+	<form-property name="yearinstalled"  type="java.lang.String"/>
+	<form-property name="statusOfSource"  type="java.lang.String"/>
+	<form-property name="disconnectedYear"  type="java.lang.String"/>
+	<form-property name="use"  type="java.lang.String"/>
+	<form-property name="otherUse"  type="java.lang.String"/>
+	<form-property name="typeofFAInstalled"  type="java.lang.String"/>
+
+	<form-property name="dobApproval"  type="java.lang.String"/>
+	<form-property name="dobFiling"  type="java.lang.String"/>
+	<form-property name="approvalDate"  type="java.lang.String"/>
+	<form-property name="dobSignoff"  type="java.lang.String"/>
+
+
+	<form-property name="fdApproval"  type="java.lang.String"/>
+	<form-property name="fdApprovalDate"  type="java.lang.String"/>
+	<form-property name="agencyApproval"  type="java.lang.String"/>
+	<form-property name="agencyApprovalDate"  type="java.lang.String"/>
+	<form-property name="agencyApprovalNo"  type="java.lang.String"/>
+	<form-property name="comments"  type="java.lang.String"/>
+	<form-property name="agencyName"  type="java.lang.String"/>
+	<form-property name="filename" type="org.apache.struts.upload.FormFile"/>
+      <form-property name="foldername" type="java.lang.String"/>
+	<form-property name="type" type="java.lang.String"/>
+	<form-property name="pathname" type="java.lang.String"/>
+	<form-property name="renamefoldername" type="java.lang.String"/>
+</form-bean>
+
+
+<form-bean name="LsfForm" type="org.apache.struts.validator.DynaValidatorForm">
+	<form-property name="hdnPermitId" type="java.lang.String"/>
+	<form-property name="hdnContext" type="java.lang.String"/>
+	<form-property name="id" type="java.lang.String"/>
+	<form-property name="methodToCall" type="java.lang.String"/>
+      <form-property name="firstname"  type="java.lang.String"/>
+	<form-property name="lastname"  type="java.lang.String"/>
+	<form-property name="certificatenumber"  type="java.lang.String"/>
+	<form-property name="phonenumber"  type="java.lang.String"/>
+	<form-property name="department"  type="java.lang.String"/>
+	<form-property name="issuedate"  type="java.lang.String"/>
+	<form-property name="expirationdate"  type="java.lang.String"/>
+	<form-property name="operatingequipments"  type="java.lang.String[]"/>
+	<form-property name="equipmentoperated"  type="java.lang.String"/>
+</form-bean>
+<form-bean name="HwasteForm" type="org.apache.struts.validator.DynaValidatorForm">
+	<form-property name="hdnPermitId" type="java.lang.String"/>
+	<form-property name="hdnContext" type="java.lang.String"/>
+	<form-property name="id" type="java.lang.String"/>
+	<form-property name="methodToCall" type="java.lang.String"/>
+	<form-property name="manifastno"  type="java.lang.String"/>
+	<form-property name="dateOftheManifest"  type="java.lang.String"/>
+	<form-property name="epaId"  type="java.lang.String"/>
+	<form-property name="hazardousWasteCategory"  type="java.lang.String"/>
+	<form-property name="waste" type="java.lang.String"/>
+	<form-property name="waste1" type="java.lang.String"/>
+	<form-property name="waste2" type="java.lang.String"/>
+	<form-property name="waste3" type="java.lang.String"/>
+	<form-property name="waste4" type="java.lang.String"/>
+	<form-property name="typeOfWaste"  type="java.lang.String"/>
+	<form-property name="typeOfWaste1"  type="java.lang.String"/>
+	<form-property name="typeOfWaste2"  type="java.lang.String"/>
+	<form-property name="typeOfWaste3"  type="java.lang.String"/>
+	<form-property name="typeOfWaste4"  type="java.lang.String"/>
+	<form-property name="wasteName"  type="java.lang.String"/>
+	<form-property name="wasteName1"  type="java.lang.String"/>
+	<form-property name="wasteName2"  type="java.lang.String"/>
+	<form-property name="wasteName3"  type="java.lang.String"/>
+	<form-property name="wasteName4"  type="java.lang.String"/>
+	<form-property name="wasteVolume"  type="java.lang.String"/>
+	<form-property name="wasteVolume1"  type="java.lang.String"/>
+	<form-property name="wasteVolume2"  type="java.lang.String"/>
+	<form-property name="wasteVolume3"  type="java.lang.String"/>
+	<form-property name="wasteVolume4"  type="java.lang.String"/>
+	<form-property name="wasteDensity"  type="java.lang.String"/>
+	<form-property name="wasteDensity1"  type="java.lang.String"/>
+	<form-property name="wasteDensity2"  type="java.lang.String"/>
+	<form-property name="wasteDensity3"  type="java.lang.String"/>
+	<form-property name="wasteDensity4"  type="java.lang.String"/>
+	<form-property name="wasteUnit"  type="java.lang.String"/>
+	<form-property name="wasteUnit1"  type="java.lang.String"/>
+	<form-property name="wasteUnit2"  type="java.lang.String"/>
+	<form-property name="wasteUnit3"  type="java.lang.String"/>
+	<form-property name="wasteUnit4"  type="java.lang.String"/>
+      <form-property name="wasteQuantity"  type="java.lang.String"/>
+      <form-property name="wasteQuantity1"  type="java.lang.String"/>
+      <form-property name="wasteQuantity2"  type="java.lang.String"/>
+      <form-property name="wasteQuantity3"  type="java.lang.String"/>
+      <form-property name="wasteQuantity4"  type="java.lang.String"/>
+	<form-property name="hazardousTotalWaste"  type="java.lang.String"/>
+	<form-property name="divisioncontactname"  type="java.lang.String"/>
+	<form-property name="telephonenumber"  type="java.lang.String"/>
+      <form-property name="epaidWaste"  type="java.lang.String"/>
+      <form-property name="companyName"  type="java.lang.String"/>
+	<form-property name="epaidFinaldes"  type="java.lang.String"/>
+
+
+</form-bean>
+
+
+<form-bean 
+name="ViolationForm"
+type="org.apache.struts.validator.DynaValidatorForm">
+	<form-property name="hdnPermitId" type="java.lang.String"/>
+	<form-property name="hdnContext" type="java.lang.String"/>
+	<form-property name="id" type="java.lang.String"/>
+	<form-property name="methodToCall" type="java.lang.String"/>
+      <form-property name="violationWhich"  type="java.lang.String"/>
+	<form-property name="violationno"  type="java.lang.String"/>
+	<form-property name="violationType"  type="java.lang.String"/>
+	<form-property name="description"  type="java.lang.String"/>
+	<form-property name="issueDate"  type="java.lang.String"/>
+	<form-property name="remedialMeassures"  type="java.lang.String"/>
+	<form-property name="contractor"  type="java.lang.String"/>
+	<form-property name="stepsTaken"  type="java.lang.String"/>
+	<form-property name="removalDate"  type="java.lang.String"/>
+	<form-property name="interMediateStatus"  type="java.lang.String"/>
+	<form-property name="finalComplianceDate"  type="java.lang.String"/>
+	<form-property name="otherAgency"  type="java.lang.String"/>
+	<form-property name="feePaid"  type="java.lang.String"/>
+	<form-property name="jDate"  type="java.lang.String"/>
+</form-bean>
+
+
+
+ </form-beans>
+  <action-mappings>
+    <action path="/Navigate"  type="com.eespc.tracking.actions.NavAction" name="navForm">
+    	 <forward name="nav1" path="/jsp/PaintSprayBooth.jsp"/>
+	 <forward name="nav2" path="/jsp/LandFills.jsp"/>
+	 <forward name="nav3" path="/jsp/AddRpz.jsp"/>
+	 <forward name="nav4" path="/jsp/AddEto.jsp"/>
+	 <forward name="nav5" path="/jsp/Elevators.jsp"/>
+	 <forward name="nav6" path="/jsp/Incinerator.jsp"/>
+    </action>
+
+
+    <action path="/PaintSprayAction" type="com.eespc.tracking.actions.PaintSprayAction" name="paintSprayForm"
+             parameter="method" scope="request" validate="false"  input="/jsp/PaintSprayBooth.jsp">
+         <forward name="success" path="paintBooth" redirect="false"/>
+         
+                      <forward name="successpaint" 
+			path="/BuildingInfo.do?methodToCall=view"
+			redirect="false" />
+         <forward name="return" path="/jsp/Navigate.jsp" redirect="false"/>
+    </action>
+    <action path="/LandFillsAction" type="com.eespc.tracking.actions.LandFillsAction" name="landFillsForm"
+             parameter="method" scope="request" validate="false" input="/jsp/LandFills.jsp">
+         <forward name="success" path="landFills" redirect="false"/>
+          <forward name="successland" 
+			path="/BuildingInfo.do?methodToCall=view"
+			redirect="false" />
+         <forward name="return" path="/jsp/Navigate.jsp" redirect="false"/>
+    </action>
+
+
+    <action path="/FumehoodAction" type="com.eespc.tracking.actions.FumehoodAction" name="FumehoodForm"
+             parameter="method" scope="request" validate="false" input="/jsp/Fumehood.jsp">
+         <forward name="success" path="Fumehood" redirect="false"/>
+			 <forward name="successfume" 
+			path="/BuildingInfo.do?methodToCall=view"
+			redirect="false" />
+         <forward name="return" path="/jsp/Navigate.jsp" redirect="false"/>
+    </action>
+
+
+    <action path="/RpzAction" type="com.eespc.tracking.actions.RpzAction" name="rpzForm"
+             parameter="method" scope="request" validate="false" input="/jsp/AddRpz.jsp">
+         <forward name="success" path="addRpz" redirect="false"/>
+          <forward name="successrpz" 
+			path="/BuildingInfo.do?methodToCall=view"
+			redirect="false" />
+         <forward name="return" path="/jsp/Navigate.jsp" redirect="false"/>
+    </action>
+    <action path="/EtoAction" type="com.eespc.tracking.actions.EtoAction" name="etoForm"
+             parameter="methodTo" scope="request" validate="false" input="/jsp/AddEto.jsp">
+         <forward name="success" path="addEto" redirect="false"/>
+         <forward name="return" path="/jsp/Navigate.jsp" redirect="false"/>
+    </action>
+
+
+
+
+    <action path="/ElevatorAction" type="com.eespc.tracking.actions.ElevatorAction" name="eleForm"
+             parameter="method" scope="request" validate="false" input="/jsp/Elevators.jsp">
+         <forward name="success" path="elevators" redirect="false"/>
+          <forward name="successelevator" 
+			path="/BuildingInfo.do?methodToCall=view"
+			redirect="false" />                                      
+         <forward name="return" path="/jsp/Navigate.jsp" redirect="false"/>
+    </action>
+
+
+
+    <action path="/IncineratorAction" type="com.eespc.tracking.actions.IncineratorAction" name="incForm"
+             parameter="method" scope="request" validate="false" input="/jsp/Incinerator.jsp">
+         <forward name="success" path="incinerator" redirect="false"/>
+			<forward name="successs3" 
+			path="/BuildingInfo.do?methodToCall=view"
+			redirect="false" />
+         <forward name="return" path="/jsp/Navigate.jsp" redirect="false"/>
+    </action>
+    <action path="/ChillerAction" type="com.eespc.tracking.actions.ChillerAction" name="chForm"
+             parameter="method" scope="request" validate="false" input="/jsp/ChillerAbsorber.jsp">
+         <forward name="success" path="chiller" redirect="false"/>
+
+			<forward name="successss" 
+			path="/BuildingInfo.do?methodToCall=view"
+			redirect="false" />
+         <forward name="return" path="/jsp/Navigate.jsp" redirect="false"/>
+    </action>
+
+<action path="/DeleteAction" type="com.eespc.tracking.actions.DeleteAction" name="DeleteForm"
+             parameter="method" scope="request" validate="false" input="/jsp/delete.jsp">
+         <forward name="success" path="DeleteForm" redirect="false"/>
+	   <forward name="deletesuccess" path="/jsp/Login.jsp" redirect="false"/>
+</action>
+
+<action path="/ExpirationReport" type="com.eespc.tracking.actions.ExpirationAction" name="ExpirationForm"
+             parameter="method" scope="request" validate="false" input="/jsp/ExpirationReport.jsp">
+         <forward name="success" path="ExpirationForm" redirect="false"/>
+	   <forward name="deletesuccess" path="/jsp/Login.jsp" redirect="false"/>
+	   <forward name="successxls" path="/jsp/expxls.jsp" redirect="false"/>
+</action>
+
+<action path="/PressAction" type="com.eespc.tracking.actions.PrintingPressAction" name="PrintingPressForm"
+             parameter="method" scope="request" validate="false" input="/jsp/PrintingPress.jsp">
+         <forward name="success" path="PrintingForm" redirect="false"/>
+	   <forward name="successpress" 
+			path="/BuildingInfo.do?methodToCall=view"
+			redirect="false" /> 
+	   <forward name="return" path="/jsp/Navigate.jsp" redirect="false"/>
+</action>
+<action path="/OtherEvalutionAction" type="com.eespc.tracking.actions.OtherEvalutionAction" name="OtherEvalutionForm"
+             parameter="method" scope="request" validate="false" input="/jsp/OtherEvalution.jsp">
+         <forward name="success" path="OtherEvalutionForm" redirect="false"/>
+	   <forward name="return" path="/jsp/Navigate.jsp" redirect="false"/>
+</action>
+
+<action path="/OthersAction" type="com.eespc.tracking.actions.OtherSourceAction" name="OtherSourceForm"
+             parameter="method" scope="request" validate="false" input="/jsp/OtherSource.jsp">
+         <forward name="success" path="OtherSourceForm" redirect="false"/>
+	  <forward name="successothers" 
+			path="/BuildingInfo.do?methodToCall=view"
+			redirect="false" />
+	   <forward name="return" path="/jsp/Navigate.jsp" redirect="false"/>
+</action>
+<action path="/ChillerRefrigationAction" type="com.eespc.tracking.actions.ChillerRefrigationAction" name="ChillerRefrigationForm"
+             parameter="method" scope="request" validate="false" input="/jsp/ChillerRefrigation.jsp">
+         <forward name="success" path="ChillerRefrigationForm" redirect="false"/>
+	   <forward name="successcr" 
+			path="/BuildingInfo.do?methodToCall=view"
+			redirect="false" /> 
+	   <forward name="return" path="/jsp/Navigate.jsp" redirect="false"/>
+</action>
+
+<action path="/FireAlarmAction" type="com.eespc.tracking.actions.FireAlarmAction" name="FireAlarmForm"
+             parameter="method" scope="request" validate="false" input="/jsp/FireAlarm.jsp">
+         <forward name="success" path="FireAlarmForm" redirect="false"/>
+	   <forward name="successcr" 
+			path="/BuildingInfo.do?methodToCall=view"
+			redirect="false" /> 
+	   <forward name="return" path="/jsp/Navigate.jsp" redirect="false"/>
+</action>
+
+
+
+
+
+<action path="/AirConditioningUnitAction" type="com.eespc.tracking.actions.AirConditioningUnitAction" name="AirConditioningForm"
+             parameter="method" scope="request" validate="false" input="/jsp/AirConditioningUnit.jsp">
+         <forward name="success" path="AirConditioningForm" redirect="false"/>
+	   <forward name="successcr" 
+			path="/BuildingInfo.do?methodToCall=view"
+			redirect="false" /> 
+	   <forward name="return" path="/jsp/Navigate.jsp" redirect="false"/>
+</action>
+
+
+
+<action path="/LsfAction" type="com.eespc.tracking.actions.LsfAction" name="LsfForm"
+             parameter="method" scope="request" validate="true" input="/jsp/Lsf.jsp">
+         <forward name="success" path="LsfForm" redirect="false"/>
+<forward name="successfc" 
+			path="/AddFacility.do?methodToCall=viewExist"
+			redirect="false" /> 
+	   <forward name="return" path="/jsp/Navigate.jsp" redirect="false"/>
+</action>
+
+<action path="/HwasteAction" type="com.eespc.tracking.actions.HwasteAction" name="HwasteForm"
+             parameter="method" scope="request" validate="true" input="/jsp/Hwaste.jsp">
+         <forward name="success" path="HwasteForm" redirect="false"/>
+<forward name="successfc" 
+			path="/AddFacility.do?methodToCall=viewExist"
+			redirect="false" /> 
+	   <forward name="return" path="/jsp/Navigate.jsp" redirect="false"/>
+</action>
+
+<action path="/ViolationAction" type="com.eespc.tracking.actions.ViolationAction" name="ViolationForm"
+             parameter="method" scope="request" validate="true" input="/jsp/Violation.jsp">
+         <forward name="success" path="ViolationForm" redirect="false"/>
+	   <forward name="successfc" path="/BuildingInfo.do?methodToCall=view" redirect="false" /> 
+	   <forward name="return" path="/jsp/Navigate.jsp" redirect="false"/>
+</action>
+
+
+
+
+    <action path="/CogenListAction" type="com.eespc.tracking.actions.CogenListAction" name="landFillsForm"
+             parameter="method" scope="request" validate="false" input="/jsp/CoGenTurbineList.jsp">
+         <forward name="success" path="/jsp/CoGenTurbineList.jsp" redirect="false"/>
+         <forward name="return" path="/jsp/Navigate.jsp" redirect="false"/>
+    </action>
+  </action-mappings>
+
+ <message-resources parameter="com.eespc.tracking.actions.application"/>
+
+</struts-config>

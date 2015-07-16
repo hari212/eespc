@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+ <!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+<tiles-definitions>
+
+   <definition name=".main" path="/jsp/MainLayout.jsp">
+    <put name="header" value="/jsp/Banner.jsp" />
+    <put name="menu" value="/jsp/NavMenu.jsp" />
+    <put name="content" value="" />
+  </definition>
+
+
+<definition name="DeleteForm" extends=".main">
+    <put name="content" value="/jsp/delete.jsp" />
+  </definition>
+<definition name="documentaction" extends=".main">
+    <put name="content" value="/jsp/document.jsp" />
+  </definition>
+
+
+  <definition name="ExpirationForm" extends=".main">
+    <put name="content" value="/jsp/ExpirationReport.jsp" />
+  </definition>
+
+<definition name="FireAlarmForm" extends=".main">
+    <put name="content" value="/jsp/FireAlarm.jsp" />
+  </definition>
+
+<definition name="Contact" extends=".main">
+    <put name="content" value="/allreports/Contact.jsp" />
+  </definition>
+
+<definition name="placeofAssembly" extends=".main">
+    <put name="content" value="/jsp/PlaceofAssembly.jsp" />
+  </definition>
+
+  <definition name=".home" extends=".main">
+    <put name="content" value="/jsp/BodyMain.jsp" />
+  </definition>
+
+  <definition name="searchFacility" extends=".main">
+    <put name="content" value="/jsp/FacilitySearch.jsp" />
+  </definition>
+
+	<definition name="searchResource" extends=".main">
+    <put name="content" value="/jsp/allResource.jsp.jsp" />
+  </definition>
+
+  <definition name="deleteFacility" extends=".main">
+    <put name="content" value="/jsp/FacilitySearch.jsp" />
+  </definition>
+
+  <definition name="addFacility" extends=".main">
+    <put name="content" value="/jsp/NewFacility.jsp" />
+  </definition>
+
+
+  <definition name="addBuilding" extends=".main">
+    <put name="content" value="/jsp/AddBuilding.jsp" />
+  </definition>
+
+ <definition name="ViolationForm" extends=".main">
+    <put name="content" value="/jsp/Violation.jsp" />
+  </definition>
+
+<definition name="HwasteForm" extends=".main">
+    <put name="content" value="/jsp/Hwaste.jsp" />
+  </definition>
+
+
+
+  <definition name="addStack" extends=".main">
+    <put name="content" value="/jsp/AddStack.jsp" />
+  </definition>
+
+  <definition name="addStorageTank" extends=".main">
+    <put name="content" value="/jsp/StorageTank.jsp" />
+  </definition>
+
+  <definition name="addHydraulicStorageTank" extends=".main">
+    <put name="content" value="/jsp/HydraulicStorageTank.jsp" />
+  </definition>
+
+  <definition name="bulkOxygenStorageTank" extends=".main">
+    <put name="content" value="/jsp/BulkOxygenStorageTank.jsp" />
+  </definition>
+
+  <definition name="boiler" extends=".main">
+    <put name="content" value="/jsp/Boiler.jsp" />
+  </definition>
+
+  <definition name="landFills" extends=".main">
+    <put name="content" value="/jsp/LandFills.jsp" />
+  </definition>
+
+  <definition name="addRpz" extends=".main">
+    <put name="content" value="/jsp/AddRpz.jsp" />
+  </definition>
+
+  <definition name="paintBooth" extends=".main">
+    <put name="content" value="/jsp/PaintSprayBooth.jsp" />
+  </definition>
+
+  <definition name="generator" extends=".main">
+    <put name="content" value="/jsp/Generator.jsp" />
+  </definition>
+
+  <definition name="bridgeTunnels" extends=".main">
+    <put name="content" value="/jsp/BridgeTunnels.jsp" />
+  </definition>
+
+  <definition name="eto" extends=".main">
+    <put name="content" value="/jsp/AddETO.jsp" />
+  </definition>
+
+  <definition name="cogenTurbine" extends=".main">
+    <put name="content" value="/jsp/CoGenerator.jsp" />
+  </definition>
+
+<definition name="Fumehood" extends=".main">
+    <put name="content" value="/jsp/Fumehood.jsp" />
+  </definition>
+
+  <definition name="elevators" extends=".main">
+  <put name="content" value="/jsp/Elevators.jsp" /> 
+  </definition>
+
+<definition name="PrintingForm" extends=".main">
+  <put name="content" value="/jsp/PrintingPress.jsp" /> 
+  </definition>
+<definition name="OtherEvalutionForm" extends=".main">
+  <put name="content" value="/jsp/OtherEvalution.jsp" /> 
+</definition>
+
+<definition name="OtherSourceForm" extends=".main">
+  <put name="content" value="/jsp/OtherSource.jsp" /> 
+  </definition>
+
+<definition name="ChillerRefrigationForm" extends=".main">
+  <put name="content" value="/jsp/ChillerRefrigation.jsp" /> 
+  </definition>
+
+<definition name="LsfForm" extends=".main">
+  <put name="content" value="/jsp/Lsf.jsp" /> 
+  </definition>
+
+
+  <definition name="incinerator" extends=".main">
+  <put name="content" value="/jsp/Incinerator.jsp" /> 
+  </definition>
+
+  <definition name="chiller" extends=".main">
+  <put name="content" value="/jsp/ChillerAbsorber.jsp" /> 
+  </definition>
+
+  <definition name="adminScreen" extends=".main">
+    <put name="content" value="/jsp/AdminScreen.jsp" />
+  </definition>
+<definition name="cpassword" extends=".main">
+    <put name="content" value="/jsp/changepassword.jsp" />
+  </definition>
+
+
+  <definition name="cogenList" >
+    <put name="content" value="/jsp/CoGenTurbineList.jsp" />
+  </definition>
+
+  <definition name="showNoStackStorageMessagePage" extends=".main">
+    <put name="content" value="/jsp/ShowNoStackStorageMessagePage.jsp" />
+  </definition>
+
+  <definition name="showMasterReportBase" extends=".main">
+    <put name="content" value="/jsp/MasterReportsBase.jsp" />
+  </definition>
+
+  <definition name="showGeneralReport" extends=".main">
+    <put name="content" value="/jsp/OtherReports.jsp" />
+  </definition>
+</tiles-definitions>

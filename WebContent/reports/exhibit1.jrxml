@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE jasperReport PUBLIC "-//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+
+<jasperReport name="exhibit1" language="java" pageWidth="1480" pageHeight="595" columnWidth="1440" leftMargin="10" rightMargin="11" topMargin="0" bottomMargin="2">
+	<property name="ireport.scriptlethandling" value="0"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<parameter name="clientName" class="java.lang.String" isForPrompting="false">
+	</parameter>
+	<parameter name="FooterImage" class="java.awt.Image">
+	</parameter>
+	<parameter name="client_name" class="java.lang.String" isForPrompting="false">
+	</parameter>
+	<field name="BUILDINGNAME" class="java.lang.String">
+	</field>
+	<field name="DOBBINNUMBER" class="java.lang.String">
+	</field>
+	<field name="BLOCKNUMBER" class="java.lang.String">
+	</field>
+	<field name="LOTNUMBER" class="java.lang.String">
+	</field>
+	<field name="BLDGSIXSTORIES" class="java.lang.String">
+	</field>
+	<field name="bldgAddress" class="java.lang.String">
+	</field>
+	<field name="FACADEINFO" class="java.lang.String">
+	</field>
+	<field name="COFO" class="java.lang.String">
+	</field>
+	<field name="COFONO" class="java.lang.String">
+	</field>
+	<field name="COMPLIANCESTATUS" class="java.lang.String">
+	</field>
+	<variable name="isEven" class="java.lang.Boolean">
+		<variableExpression><![CDATA[$V{REPORT_COUNT}.intValue() % 2 == 0 ? Boolean.TRUE : Boolean.FALSE]]></variableExpression>
+	</variable>
+	<variable name="isOdd" class="java.lang.Boolean">
+		<variableExpression><![CDATA[$V{REPORT_COUNT}.intValue() % 2 == 1 ? Boolean.TRUE : Boolean.FALSE]]></variableExpression>
+	</variable>
+	<background>
+		<band>
+		</band>
+	</background>
+	<title>
+		<band height="72">
+			<staticText>
+				<reportElement key="staticText" x="0" y="15" width="280" height="13" forecolor="#1688a"/>
+				<box topBorder="None" topBorderColor="#0" leftBorder="None" leftBorderColor="#0" bottomBorder="None" bottomBorderColor="#0" rightBorder="None" rightBorderColor="#0"/>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Times-Roman" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[EESPC Compliance Tracking Software (EESCTS)]]></text>
+			</staticText>
+			<line>
+				<reportElement key="line" x="0" y="1" width="1440" height="1"/>
+				<graphicElement pen="2Point"/>
+			</line>
+			<textField pattern="">
+				<reportElement key="textField-2" mode="Opaque" x="0" y="46" width="1440" height="18" forecolor="#1688a"/>
+				<box topBorder="None" topBorderColor="#0" leftBorder="None" leftBorderColor="#0" bottomBorder="None" bottomBorderColor="#0" rightBorder="None" rightBorderColor="#0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="15" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Times-Roman" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["REPORT 1: LIST OF BUILDINGS MANAGED BY  '"+$P{client_name}+"' AND COMPLIANCE STATUS WITH DOB"]]></textFieldExpression>
+			</textField>
+			<textField pattern="">
+				<reportElement key="textField-2" mode="Opaque" x="0" y="2" width="200" height="13" forecolor="#1688a"/>
+				<box topBorder="None" topBorderColor="#0" leftBorder="None" leftBorderColor="#0" bottomBorder="None" bottomBorderColor="#0" rightBorder="None" rightBorderColor="#0"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Times-Roman" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[""+ $P{clientName}+""]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement key="line" x="0" y="70" width="1440" height="1"/>
+				<graphicElement pen="2Point"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="50">
+			<staticText>
+				<reportElement key="staticText-4" mode="Opaque" x="0" y="0" width="35" height="50" forecolor="#ffffff" backcolor="#1688a"/>
+				<box topBorder="2Point" topBorderColor="#0" leftBorder="2Point" leftBorderColor="#0" bottomBorder="2Point" bottomBorderColor="#0" rightBorder="Thin" rightBorderColor="#0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times-Roman" size="14" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Times-Roman" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[No.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText" mode="Opaque" x="35" y="0" width="220" height="50" forecolor="#ffffff" backcolor="#1688a"/>
+				<box topBorder="2Point" topBorderColor="#0" leftBorder="None" leftBorderColor="#0" bottomBorder="2Point" bottomBorderColor="#0" rightBorder="Thin" rightBorderColor="#0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times-Roman" size="14" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Times-Roman" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[Building Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText" mode="Opaque" x="255" y="0" width="280" height="50" forecolor="#ffffff" backcolor="#1688a"/>
+				<box topBorder="2Point" topBorderColor="#0" leftBorder="None" leftBorderColor="#0" bottomBorder="2Point" bottomBorderColor="#0" rightBorder="Thin" rightBorderColor="#0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times-Roman" size="14" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Times-Roman" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[Address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText" mode="Opaque" x="535" y="0" width="145" height="50" forecolor="#ffffff" backcolor="#1688a"/>
+				<box topBorder="2Point" topBorderColor="#0" leftBorder="None" leftBorderColor="#0" bottomBorder="2Point" bottomBorderColor="#0" rightBorder="Thin" rightBorderColor="#0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times-Roman" size="14" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Times-Roman" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[BIN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText" mode="Opaque" x="680" y="0" width="140" height="50" forecolor="#ffffff" backcolor="#1688a"/>
+				<box topBorder="2Point" topBorderColor="#0" leftBorder="None" leftBorderColor="#0" bottomBorder="2Point" bottomBorderColor="#0" rightBorder="Thin" rightBorderColor="#0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times-Roman" size="14" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Times-Roman" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[Block No.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText" mode="Opaque" x="820" y="0" width="140" height="50" forecolor="#ffffff" backcolor="#1688a"/>
+				<box topBorder="2Point" topBorderColor="#0" leftBorder="None" leftBorderColor="#0" bottomBorder="2Point" bottomBorderColor="#0" rightBorder="Thin" rightBorderColor="#0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times-Roman" size="14" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Times-Roman" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[Lot No.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText" mode="Opaque" x="960" y="0" width="59" height="50" forecolor="#ffffff" backcolor="#1688a"/>
+				<box topBorder="2Point" topBorderColor="#0" leftBorder="None" leftBorderColor="#0" bottomBorder="2Point" bottomBorderColor="#0" rightBorder="1Point" rightBorderColor="#0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times-Roman" size="14" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Times-Roman" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[No. of Stories]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText" mode="Opaque" x="1019" y="0" width="113" height="50" forecolor="#ffffff" backcolor="#1688a"/>
+				<box topBorder="2Point" topBorderColor="#0" leftBorder="None" leftBorderColor="#0" bottomBorder="2Point" bottomBorderColor="#0" rightBorder="1Point" rightBorderColor="#0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times-Roman" size="14" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Times-Roman" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[Facade Info.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText" mode="Opaque" x="1132" y="0" width="100" height="50" forecolor="#ffffff" backcolor="#1688a"/>
+				<box topBorder="2Point" topBorderColor="#0" leftBorder="None" leftBorderColor="#0" bottomBorder="2Point" bottomBorderColor="#0" rightBorder="1Point" rightBorderColor="#0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times-Roman" size="12" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Times-Roman" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[C Of O Availability Status]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText" mode="Opaque" x="1232" y="0" width="100" height="50" forecolor="#ffffff" backcolor="#1688a"/>
+				<box topBorder="2Point" topBorderColor="#0" leftBorder="None" leftBorderColor="#0" bottomBorder="2Point" bottomBorderColor="#0" rightBorder="1Point" rightBorderColor="#0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times-Roman" size="14" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Times-Roman" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[(C OF O) No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText" mode="Opaque" x="1332" y="0" width="108" height="50" forecolor="#ffffff" backcolor="#1688a"/>
+				<box topBorder="2Point" topBorderColor="#0" leftBorder="None" leftBorderColor="#0" bottomBorder="2Point" bottomBorderColor="#0" rightBorder="2Point" rightBorderColor="#0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times-Roman" size="14" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Times-Roman" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[Compliance Status]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="25">
+			<textField pattern="">
+				<reportElement key="textField-1" stretchType="RelativeToTallestObject" x="0" y="0" width="35" height="25"/>
+				<box topBorder="None" topBorderColor="#0" leftBorder="2Point" leftBorderColor="#0" bottomBorder="Thin" bottomBorderColor="#0" rightBorder="Thin" rightBorderColor="#0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times-Roman" size="13" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Times-Roman" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField pattern="">
+				<reportElement key="textField" stretchType="RelativeToTallestObject" x="35" y="0" width="220" height="25"/>
+				<box topBorder="None" topBorderColor="#0" leftBorder="None" leftBorderColor="#0" bottomBorder="Thin" bottomBorderColor="#0" rightBorder="Thin" rightBorderColor="#0"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times-Roman" size="12" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Times-Roman" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{BUILDINGNAME}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="">
+				<reportElement key="textField" stretchType="RelativeToTallestObject" x="255" y="0" width="280" height="25"/>
+				<box topBorder="None" topBorderColor="#0" leftBorder="None" leftBorderColor="#0" bottomBorder="Thin" bottomBorderColor="#0" rightBorder="Thin" rightBorderColor="#0"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times-Roman" size="12" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Times-Roman" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{bldgAddress}]]></textFieldExpression>
+			</textField>
+			<textField pattern="">
+				<reportElement key="textField" stretchType="RelativeToTallestObject" x="535" y="0" width="145" height="25"/>
+				<box topBorder="None" topBorderColor="#0" leftBorder="None" leftBorderColor="#0" bottomBorder="Thin" bottomBorderColor="#0" rightBorder="Thin" rightBorderColor="#0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times-Roman" size="13" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Times-Roman" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{DOBBINNUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="">
+				<reportElement key="textField" stretchType="RelativeToTallestObject" x="680" y="0" width="140" height="25"/>
+				<box topBorder="None" topBorderColor="#0" leftBorder="None" leftBorderColor="#0" bottomBorder="Thin" bottomBorderColor="#0" rightBorder="Thin" rightBorderColor="#0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times-Roman" size="13" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Times-Roman" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{BLOCKNUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="">
+				<reportElement key="textField" stretchType="RelativeToTallestObject" x="820" y="0" width="140" height="25"/>
+				<box topBorder="None" topBorderColor="#0" leftBorder="None" leftBorderColor="#0" bottomBorder="Thin" bottomBorderColor="#0" rightBorder="Thin" rightBorderColor="#0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times-Roman" size="13" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Times-Roman" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{LOTNUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="">
+				<reportElement key="textField" stretchType="RelativeToTallestObject" x="960" y="0" width="59" height="25"/>
+				<box topBorder="None" topBorderColor="#0" leftBorder="None" leftBorderColor="#0" bottomBorder="Thin" bottomBorderColor="#0" rightBorder="Thin" rightBorderColor="#0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times-Roman" size="13" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Times-Roman" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{BLDGSIXSTORIES}]]></textFieldExpression>
+			</textField>
+			<textField pattern="">
+				<reportElement key="textField" stretchType="RelativeToTallestObject" x="1019" y="0" width="113" height="25"/>
+				<box topBorder="None" topBorderColor="#0" leftBorder="None" leftBorderColor="#0" bottomBorder="Thin" bottomBorderColor="#0" rightBorder="Thin" rightBorderColor="#0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times-Roman" size="13" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Times-Roman" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{FACADEINFO}]]></textFieldExpression>
+			</textField>
+			<textField pattern="">
+				<reportElement key="textField" stretchType="RelativeToTallestObject" x="1132" y="0" width="100" height="25"/>
+				<box topBorder="None" topBorderColor="#0" leftBorder="None" leftBorderColor="#0" bottomBorder="Thin" bottomBorderColor="#0" rightBorder="Thin" rightBorderColor="#0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times-Roman" size="13" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Times-Roman" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{COFO}]]></textFieldExpression>
+			</textField>
+			<textField pattern="">
+				<reportElement key="textField" stretchType="RelativeToTallestObject" x="1232" y="0" width="100" height="25"/>
+				<box topBorder="None" topBorderColor="#0" leftBorder="None" leftBorderColor="#0" bottomBorder="Thin" bottomBorderColor="#0" rightBorder="Thin" rightBorderColor="#0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times-Roman" size="13" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Times-Roman" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{COFONO}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" hyperlinkType="Reference" hyperlinkTarget="Blank">
+				<reportElement key="textField" stretchType="RelativeToTallestObject" x="1332" y="0" width="108" height="25" forecolor="#ff0000">
+					<printWhenExpression><![CDATA[new Boolean(String.valueOf($F{COMPLIANCESTATUS}).equals("Non Compliance"))]]></printWhenExpression>
+				</reportElement>
+				<box topBorder="None" topBorderColor="#0" leftBorder="None" leftBorderColor="#0" bottomBorder="Thin" bottomBorderColor="#0" rightBorder="2Point" rightBorderColor="#0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times-Roman" size="13" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Times-Roman" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{COMPLIANCESTATUS}]]></textFieldExpression>
+				<hyperlinkReferenceExpression><![CDATA["jsp/exhibit6help.jsp?id=1"]]></hyperlinkReferenceExpression>
+			</textField>
+			<textField pattern="">
+				<reportElement key="textField" stretchType="RelativeToTallestObject" x="1332" y="0" width="108" height="25">
+					<printWhenExpression><![CDATA[new Boolean(!String.valueOf($F{COMPLIANCESTATUS}).equals("Non Compliance"))]]></printWhenExpression>
+				</reportElement>
+				<box topBorder="None" topBorderColor="#0" leftBorder="None" leftBorderColor="#0" bottomBorder="Thin" bottomBorderColor="#0" rightBorder="2Point" rightBorderColor="#0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times-Roman" size="13" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Times-Roman" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{COMPLIANCESTATUS}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="32">
+			<line>
+				<reportElement key="line" x="0" y="1" width="1440" height="1"/>
+				<graphicElement pen="2Point"/>
+			</line>
+			<textField pattern="">
+				<reportElement key="textField" x="560" y="10" width="174" height="18"/>
+				<box topBorder="None" topBorderColor="#0" leftBorder="None" leftBorderColor="#0" bottomBorder="None" bottomBorderColor="#0" rightBorder="None" rightBorderColor="#0"/>
+				<textElement textAlignment="Right">
+					<font fontName="Helvetica" size="11" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Page " + $V{PAGE_NUMBER} + " of "]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report" pattern="">
+				<reportElement key="textField" x="738" y="10" width="36" height="18"/>
+				<box topBorder="None" topBorderColor="#0" leftBorder="None" leftBorderColor="#0" bottomBorder="None" bottomBorderColor="#0" rightBorder="None" rightBorderColor="#0"/>
+				<textElement>
+					<font fontName="Helvetica" size="11" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["" + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="">
+				<reportElement key="textField" x="2" y="10" width="126" height="18"/>
+				<box topBorder="None" topBorderColor="#0" leftBorder="None" leftBorderColor="#0" bottomBorder="None" bottomBorderColor="#0" rightBorder="None" rightBorderColor="#0"/>
+				<textElement>
+					<font fontName="Times-Roman" size="11" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Times-Roman" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression class="java.util.Date"><![CDATA[new Date()]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="1210" y="8" width="25" height="22"/>
+				<graphicElement/>
+				<imageExpression class="java.awt.Image"><![CDATA[$P{FooterImage}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement key="staticText-2" mode="Opaque" x="1237" y="10" width="240" height="18"/>
+				<box topBorder="None" topBorderColor="#0" leftBorder="None" leftBorderColor="#0" bottomBorder="None" bottomBorderColor="#0" rightBorder="None" rightBorderColor="#0"/>
+				<textElement verticalAlignment="Middle" isStyledText="true">
+					<font fontName="Arial" size="11" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[Environmental Engineering Solutions, P.C.]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="250">
+		
+		</band>
+	</summary>
+</jasperReport>

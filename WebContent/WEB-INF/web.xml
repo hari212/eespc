@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/dtd"
+	xsi:schemaLocation="http://java.sun.com/ http://java.sun.com/dtd/web-app_2_3.dtd"
+	id="WebApp_ID" version="2.3">
+	<display-name>eespc</display-name>
+	<filter>
+		<filter-name>loginFilter</filter-name>
+		<filter-class>com.eespc.tracking.ui.filters.LoginFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>loginFilter</filter-name>
+		<url-pattern>*.do</url-pattern>
+	</filter-mapping>
+	<!-- Standard Action Servlet Configuration (with debugging) -->
+	<servlet>
+		<servlet-name>action</servlet-name>
+		<servlet-class>org.apache.struts.action.ActionServlet</servlet-class>
+		<init-param>
+			<param-name>config</param-name>
+			<param-value>/WEB-INF/struts-config.xml,/WEB-INF/struts-config-screens.xml</param-value>
+		</init-param>
+		<init-param>
+			<param-name>debug</param-name>
+			<param-value>2</param-value>
+		</init-param>
+		<init-param>
+			<param-name>detail</param-name>
+			<param-value>2</param-value>
+		</init-param>
+		<load-on-startup>2</load-on-startup>
+	</servlet>
+
+	<servlet>
+		<servlet-name>log4j-init</servlet-name>
+		<servlet-class>com.eespc.tracking.util.InitializeLogging</servlet-class>
+		<init-param>
+			<param-name>log4j-config-file</param-name>
+			<param-value>WEB-INF/config/log4j.properties</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<!-- Servlet For Report Start -->
+	<servlet>
+		<servlet-name>Reports</servlet-name>
+		<servlet-class>com.eespc.tracking.reports.servlets.ReportServlet</servlet-class>
+		<load-on-startup>3</load-on-startup>
+	</servlet>
+
+	<!-- Servlet For Report End -->
+	<servlet>
+		<servlet-name>PdfServlet</servlet-name>
+		<servlet-class>com.eespc.tracking.reports.servlets.PdfServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>XlsServlet</servlet-name>
+		<servlet-class>com.eespc.tracking.reports.servlets.XlsServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ImageServlet</servlet-name>
+		<servlet-class>com.eespc.tracking.reports.servlets.ImageServlet</servlet-class>
+	</servlet>
+
+
+
+	<servlet>
+		<servlet-name>getpath</servlet-name>
+		<servlet-class>getpath</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>getpath</servlet-name>
+		<url-pattern>/getpath</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>exhipass</servlet-name>
+		<servlet-class>com.eespc.tracking.actions.ResetPasswordAction</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>exhipass</servlet-name>
+		<url-pattern>/sendpass</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>exhi18</servlet-name>
+		<servlet-class>exhi18</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>exhi18</servlet-name>
+		<url-pattern>/exhi18</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>saved</servlet-name>
+		<servlet-class>saved</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>saved</servlet-name>
+		<url-pattern>/saved</url-pattern>
+	</servlet-mapping>
+
+
+
+	<servlet-mapping>
+		<servlet-name>PdfServlet</servlet-name>
+		<url-pattern>/pdf</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>XlsServlet</servlet-name>
+		<url-pattern>/xls</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ImageServlet</servlet-name>
+		<url-pattern>/image</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- <servlet-mapping> <servlet-name>Reports</servlet-name> <url-pattern>/ShowReport</url-pattern> 
+		</servlet-mapping> -->
+	<servlet-mapping>
+		<servlet-name>action</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+     
+     <error-page>
+    <error-code>404</error-code>
+    <location>/jsp/error404.jsp</location>
+  </error-page>
+  
+	<!-- The Usual Welcome File List -->
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
+	<session-config>
+		<session-timeout>40</session-timeout>
+	</session-config>
+	 
+	<!-- Struts Tag Library Descriptors -->
+	<!-- <taglib> <taglib-uri>/tags/struts-bean</taglib-uri> <taglib-location>/WEB-INF/struts-bean.tld</taglib-location> 
+		</taglib> <taglib> <taglib-uri>/tags/struts-html</taglib-uri> <taglib-location>/WEB-INF/struts-html.tld</taglib-location> 
+		</taglib> <taglib> <taglib-uri>/tags/struts-logic</taglib-uri> <taglib-location>/WEB-INF/struts-logic.tld</taglib-location> 
+		</taglib> <taglib> <taglib-uri>/tags/struts-nested</taglib-uri> <taglib-location>/WEB-INF/struts-nested.tld</taglib-location> 
+		</taglib> <taglib> <taglib-uri>/tags/struts-tiles</taglib-uri> <taglib-location>/WEB-INF/struts-tiles.tld</taglib-location> 
+		</taglib> <taglib> <taglib-uri>/tags/c</taglib-uri> <taglib-location>/WEB-INF/c.tld</taglib-location> 
+		</taglib> <taglib> <taglib-uri>/tags/EespcTag</taglib-uri> <taglib-location>/WEB-INF/EespcTag.tld</taglib-location> 
+		</taglib> -->
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
